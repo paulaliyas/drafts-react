@@ -1,1 +1,144 @@
 
+// components/ServicesSection.tsx
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+
+// Asset URLs from Figma (replace with your actual asset paths/imports)
+const imgImg1 = "http://localhost:3845/assets/80964ddd98f027bbd342b6c689e34f60453dacaf.png";
+const imgRectangle = "http://localhost:3845/assets/991d97b4d5c1d81b07f618ec3b8702235c61b744.png";
+const imgRe2 = "http://localhost:3845/assets/0c9522c00a0ce6d114ae792e229299bf731f4fe4.png";
+const imgRectangle1 = "http://localhost:3845/assets/87a8b30a6c3b000a5448e5d353711f2e5e443368.png";
+const imgVector = "http://localhost:3845/assets/67d7349b94c03bb4221b5d1827e2248744422d19.svg";
+
+// ─── Types ────────────────────────────────────────────────────────────────────
+
+interface ServiceCard {
+  id: string;
+  label: string;
+  bgColor: string;
+  textColor: string;
+  borderColor: string;
+}
+
+// ─── Data ─────────────────────────────────────────────────────────────────────
+
+const SERVICE_CARDS: ServiceCard[] = [
+  {
+    id: "subscriber",
+    label: "خدمـــــــات المشتركيــن",
+    bgColor: "bg-[#bfbfd3]",
+    textColor: "text-[#00004e]",
+    borderColor: "border-[#334157]",
+  },
+  {
+    id: "sanad",
+    label: "مستفيــدي سانـــــــــــــد",
+    bgColor: "bg-[#0064ff]",
+    textColor: "text-white",
+    borderColor: "border-[#334157]",
+  },
+  {
+    id: "retirement",
+    label: "خدمـــــــات التقـــــــــاعد",
+    bgColor: "bg-[#a37dfc]",
+    textColor: "text-[#00004e]",
+    borderColor: "border-[#334157]",
+  },
+  {
+    id: "occupational",
+    label: "الأخطــــــــار المهنيــــــــة",
+    bgColor: "bg-[#00bf00]",
+    textColor: "text-[#00004e]",
+    borderColor: "border-[#334157]",
+  },
+];
+
+// ─── Sub-components ───────────────────────────────────────────────────────────
+
+function ServiceCard({ card, isActive }: { card: ServiceCard; isActive?: boolean }) {
+  return (
+    <button
+      className={`
+        relative flex-1 h-[509px] rounded-[20px] border border-solid
+        overflow-hidden transition-all duration-300
+        ${card.bgColor} ${card.borderColor}
+        flex flex-col justify-start p-6
+        text-right
+      `}
+      dir="rtl"
+    >
+      {/* Decorative overlay image — only on active card */}
+      {isActive && (
+        <div className="absolute inset-0 opacity-50 pointer-events-none">
+          <Image
+            src={imgImg1}
+            alt=""
+            fill
+            className="object-cover"
+            sizes="300px"
+          />
+        </div>
+      )}
+
+      {/* Label */}
+      <p
+        className={`
+          relative z-10 font-bold text-[32px] leading-[34px]
+          ${card.textColor}
+          font-['Ping_AR_+_LT',_sans-serif]
+        `}
+        dir="auto"
+      >
+        {card.label}
+      </p>
+    </button>
+  );
+}
+
+// ─── Main Section ─────────────────────────────────────────────────────────────
+
+export default function about() {
+  return (
+    <section className="flex flex-col gap-8 w-full" dir="rtl">
+      {/* Header Row */}
+      <div className="flex items-center justify-between w-full">
+        {/* Right side: Title */}
+        <h2
+          className="font-bold text-[48px] leading-[60px] text-white whitespace-nowrap font-['Ping_AR_+_LT',_sans-serif]"
+          dir="auto"
+        >
+          خدمات التأمينات الإجتماعية
+        </h2>
+
+        {/* Left side: Nav controls */}
+        <div className="flex items-center gap-[18px]">
+          {/* Arrow button */}
+          <button
+            aria-label="السابق"
+            className="flex items-center justify-center w-12 h-12 rounded-full border border-white shrink-0"
+          >
+            <Image src={imgVector} alt="" width={24} height={24} />
+          </button>
+
+          {/* "All services" link */}
+          <Link
+            href="#"
+            className="text-white text-[24px] leading-[26px] font-bold underline decoration-solid whitespace-nowrap font-['Ping_AR_+_LT',_sans-serif]"
+            dir="auto"
+          >
+            كل الخدمات
+          </Link>
+        </div>
+      </div>
+
+      {/* Cards Grid */}
+      <div className="flex gap-0 w-full h-[509px]">
+        {SERVICE_CARDS.map((card, i) => (
+          <ServiceCard key={card.id} card={card} isActive={i === 1} />
+        ))}
+      </div>
+    </section>
+  );
+}
