@@ -1,0 +1,31 @@
+@reference "#tailwind-global.css";
+
+.tile {
+  @apply bg-[rgba(51,65,87,0.3)] flex flex-col gap-2 items-end overflow-hidden
+    px-4 py-6 rounded-2xl w-full;
+}
+
+.icon {
+  @apply relative shrink-0 w-8 h-8;
+}
+
+.label {
+  @apply text-xl leading-7 text-white;
+  font-family: "Ping AR + LT", sans-serif;
+  font-weight: 400;
+  min-width: 100%;
+}
+
+.linkText {
+  @apply font-medium text-xl leading-7 text-[#00bf00] text-left cursor-pointer
+    hover:underline transition-all;
+  font-family: "Ping AR + LT", sans-serif;
+  min-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .label,
+  .linkText {
+    @apply text-base leading-6;
+  }
+}

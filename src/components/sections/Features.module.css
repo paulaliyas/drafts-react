@@ -1,0 +1,45 @@
+@reference "#tailwind-global.css";
+
+.section {
+  @apply py-24 px-6 bg-sand-50;
+  id: features;
+}
+
+.inner {
+  @apply max-w-5xl mx-auto;
+}
+
+.label {
+  @apply block text-center text-xs font-semibold uppercase tracking-widest text-sand-500 mb-4;
+  font-family: var(--font-body);
+}
+
+.heading {
+  @apply text-center text-4xl md:text-5xl font-bold text-ink mb-16;
+  font-family: var(--font-display);
+}
+
+.grid {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-6;
+}
+
+.card {
+  @apply p-8 rounded-2xl border border-sand-200 bg-cream;
+  @apply hover:border-sand-400 hover:shadow-lg transition-all duration-300;
+  @apply hover:-translate-y-1;
+}
+
+.icon {
+  @apply w-10 h-10 mb-5 rounded-xl flex items-center justify-center;
+  @apply bg-sand-100 text-sand-600 text-lg;
+}
+
+.cardTitle {
+  @apply text-lg font-semibold text-ink mb-2;
+  font-family: var(--font-display);
+}
+
+.cardDesc {
+  @apply text-sm text-ink-muted leading-relaxed;
+  font-family: var(--font-body);
+}

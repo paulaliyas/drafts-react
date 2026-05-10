@@ -1,0 +1,78 @@
+@reference "#tailwind-global.css";
+
+.page {
+  @apply flex flex-col gap-8 w-full;
+}
+
+@media (max-width: 767px) {
+  .page {
+    @apply gap-4;
+  }
+}
+
+.pageHeader {
+  @apply w-full;
+}
+
+/* Desktop: 3-col sidebar + 9-col main */
+.layout {
+  @apply w-full items-start;
+  display: grid;
+  grid-template-columns: 3fr 9fr;
+  gap: 24px;
+}
+
+/* Mobile: single column — force full width on both children */
+@media (max-width: 767px) {
+  .layout {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: unset;
+    gap: 16px;
+  }
+}
+
+.sidebar {
+  @apply flex flex-col gap-6 w-full;
+}
+
+@media (max-width: 767px) {
+  .sidebar {
+    @apply gap-4 w-full;
+    min-width: 0;
+  }
+}
+
+.main {
+  @apply flex flex-col gap-6 w-full min-w-0;
+}
+
+@media (max-width: 767px) {
+  .main {
+    @apply gap-4 w-full;
+  }
+}
+
+/* SearchFaster + AppStore inside sidebar:
+   visible on desktop, hidden on mobile */
+.sidebarCards {
+  @apply flex flex-col gap-6;
+}
+
+@media (max-width: 767px) {
+  .sidebarCards {
+    @apply hidden;
+  }
+}
+
+/* SearchFaster + AppStore below cards:
+   hidden on desktop, visible on mobile */
+.belowCardsMobile {
+  @apply hidden;
+}
+
+@media (max-width: 767px) {
+  .belowCardsMobile {
+    @apply flex flex-col gap-4;
+  }
+}

@@ -1,0 +1,185 @@
+@reference "#tailwind-global.css";
+
+/* ─── Section ─────────────────────────────────────────────────────────────────── */
+
+.section {
+  @apply flex flex-col gap-6 items-start w-full;
+}
+
+/* ─── Video block ─────────────────────────────────────────────────────────────── */
+
+.videoBlock {
+  @apply relative rounded-3xl overflow-hidden shrink-0 w-full;
+  height: 377px;
+}
+
+.videoOverlay {
+  @apply absolute inset-0 bg-[#00004e] rounded-3xl;
+  opacity: 0.58;
+}
+
+.videoTitle {
+  @apply absolute font-medium text-xl leading-7 text-white text-right whitespace-nowrap;
+  top: 40px;
+  right: 45px;
+  font-family: "Ping AR + LT", sans-serif;
+}
+
+.playBtn {
+  @apply absolute cursor-pointer;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 95px;
+  height: 95px;
+}
+
+/* ─── Info cards ──────────────────────────────────────────────────────────────── */
+
+.infoCard {
+  @apply bg-[rgba(51,65,87,0.2)] flex flex-col gap-4 items-start p-8 rounded-[20px] w-full;
+}
+
+.infoCardHeader {
+  @apply flex gap-2.5 items-center;
+}
+
+.infoCardIcon {
+  @apply relative shrink-0 w-[42px] h-[42px];
+}
+
+.infoCardHeading {
+  @apply font-bold text-2xl leading-[34px] text-white;
+  font-family: "Ping AR + LT", sans-serif;
+}
+
+.infoList {
+  @apply flex flex-col gap-3 w-full list-disc;
+  padding-inline-start: 30px;
+  font-family: "Ping AR + LT", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  color: white;
+}
+
+/* ─── CTA row ─────────────────────────────────────────────────────────────────── */
+
+.ctaRow {
+  @apply flex gap-6 items-stretch w-full;
+}
+
+/* Download card */
+.ctaDownloadCard {
+  @apply bg-[#0064ff] flex flex-col gap-3 items-start justify-between
+    pl-[13px] pr-[18px] py-[25px] rounded-2xl flex-1;
+}
+
+.ctaDownloadTop {
+  @apply flex gap-1 items-start w-full;
+}
+
+.ctaDownloadBadge {
+  @apply shrink-0 w-[50px] h-[50px];
+}
+
+.ctaDownloadText {
+  @apply flex-1 font-bold text-lg leading-[26px] text-white whitespace-pre-wrap;
+  font-family: "Ping AR + LT", sans-serif;
+}
+
+/* FAQ card */
+.ctaFaqCard {
+  @apply bg-[#a37dfc] flex flex-col gap-3 items-start justify-between
+    px-6 py-[25px] rounded-2xl flex-1;
+}
+
+.ctaFaqTop {
+  @apply flex gap-3 items-center w-full;
+}
+
+.ctaFaqIcon {
+  @apply shrink-0 w-[42px] h-[42px];
+}
+
+.ctaFaqTextGroup {
+  @apply flex flex-col;
+}
+
+.ctaFaqTitle {
+  @apply font-bold text-lg leading-[26px] text-[#00122d];
+  font-family: "Ping AR + LT", sans-serif;
+}
+
+.ctaFaqSubtitle {
+  @apply font-bold text-lg leading-[26px] text-[#00122d];
+  font-family: "Ping AR + LT", sans-serif;
+}
+
+/* Shared link button */
+.ctaLinkBtn {
+  @apply flex gap-2 items-center cursor-pointer self-end;
+}
+
+.ctaLinkBtn span {
+  @apply underline text-white text-base leading-6;
+  font-family: "Ping AR + LT", sans-serif;
+  font-weight: 500;
+}
+
+.ctaLinkIcon {
+  @apply w-6 h-6 shrink-0;
+}
+
+/* ─── Mobile overrides ───────────────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .videoBlock {
+    height: 220px;
+  }
+
+  .videoTitle {
+    top: 20px;
+    right: 20px;
+    @apply text-base;
+  }
+
+  .playBtn {
+    width: 64px;
+    height: 64px;
+  }
+
+  .infoCard {
+    @apply p-4;
+  }
+
+  .infoCardHeading {
+    @apply text-lg leading-7;
+    white-space: normal;
+  }
+
+  .infoList {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  /* CTA: stack vertically on mobile */
+  .ctaRow {
+    @apply flex-col gap-4;
+  }
+
+  .ctaDownloadCard,
+  .ctaFaqCard {
+    @apply w-full;
+    flex: none;
+  }
+
+  .ctaFaqTitle,
+  .ctaFaqSubtitle {
+    @apply whitespace-normal;
+  }
+
+  .ctaDownloadText {
+    @apply whitespace-normal;
+  }
+}

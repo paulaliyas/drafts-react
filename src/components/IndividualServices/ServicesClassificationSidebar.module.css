@@ -1,0 +1,51 @@
+@reference "#tailwind-global.css";
+
+/* Same vertical card layout on ALL screen sizes */
+.card {
+  @apply relative w-full overflow-hidden;
+  background-color: rgba(51, 65, 87, 0.70);
+  border-radius: 20px;
+}
+
+.title {
+  @apply text-right text-white w-full;
+  direction: rtl;
+  font-family: 'Ping AR + LT', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  padding: 32px 23px 12px 23px;
+}
+
+.list {
+  @apply flex flex-col;
+  padding: 0 23px 24px 23px;
+  gap: 6px;
+}
+
+.item {
+  @apply flex items-center w-full cursor-pointer;
+  height: 57px;
+  border-radius: 10px;
+  padding: 0 11px;
+  font-family: 'Ping AR + LT', sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  transition: background-color 0.15s;
+}
+
+.itemActive {
+  background-color: #00bf00;
+  font-weight: 700;
+  color: #00004e;
+}
+
+.itemInactive {
+  background-color: rgba(128, 136, 150, 0.26);
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.itemInactive:hover {
+  background-color: rgba(128, 136, 150, 0.38);
+}

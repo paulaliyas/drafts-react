@@ -1,0 +1,27 @@
+@reference "#tailwind-global.css";
+
+.tabBar {
+  @apply flex gap-11 items-start border-b border-[#e5e7ea] pt-3 w-full;
+}
+
+.tab {
+  @apply flex items-center justify-center h-8 pb-6 px-1 cursor-pointer
+    text-[18px] leading-[26px] text-[#e5e7ea] whitespace-nowrap
+    border-b-2 border-transparent transition-colors;
+  font-family: "Ping AR + LT", sans-serif;
+  font-weight: 400;
+}
+
+.tabIsActive {
+  @apply border-[#00bf00] text-white font-bold;
+}
+
+@media (max-width: 768px) {
+  .tabBar {
+    @apply gap-6;
+  }
+
+  .tab {
+    @apply text-base flex-1 justify-center;
+  }
+}

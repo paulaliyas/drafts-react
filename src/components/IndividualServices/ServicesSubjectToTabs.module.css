@@ -1,0 +1,58 @@
+@reference "#tailwind-global.css";
+
+/* Desktop: title left, tabs right */
+.wrapper {
+  @apply flex items-center justify-between w-full gap-6;
+}
+
+/* Mobile: stack title above tabs */
+@media (max-width: 767px) {
+  .wrapper {
+    @apply flex-col items-start gap-3;
+  }
+}
+
+.title {
+  @apply text-white shrink-0;
+  font-family: 'Ping AR + LT', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 40px;
+}
+
+@media (max-width: 767px) {
+  .title {
+    font-size: 22px;
+    line-height: 32px;
+  }
+}
+
+.tabBar {
+  @apply flex items-center gap-1 rounded-full p-1 shrink-0;
+  background-color: #334157;
+}
+
+@media (max-width: 767px) {
+  .tabBar {
+    @apply w-full shrink-0;
+  }
+}
+
+.tab {
+  @apply flex flex-1 items-center justify-center px-[10px] py-[10px] rounded-full whitespace-nowrap cursor-pointer transition-colors duration-200;
+  font-family: 'Ping AR + LT', sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.tabInactive {
+  @apply text-white;
+  font-weight: 500;
+  background-color: #334157;
+}
+
+.tabActive {
+  @apply text-[#00004e];
+  font-weight: 700;
+  background-color: #00bf00;
+}

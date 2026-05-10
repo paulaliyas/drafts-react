@@ -1,0 +1,97 @@
+@reference "#tailwind-global.css";
+
+.banner {
+  @apply relative rounded-3xl overflow-hidden w-full bg-[#a37dfc];
+  height: 259px;
+}
+
+/* content block shifted to left: 36px per Figma */
+.content {
+  @apply absolute flex flex-col gap-3 items-start;
+  top: 33px;
+  left: 36px;
+  width: 485px;
+}
+
+.headings {
+  @apply flex flex-col gap-3 items-start w-full;
+  font-family: "Ping AR + LT", sans-serif;
+}
+
+.heading {
+  @apply font-bold text-2xl text-[#00004e] w-full;
+}
+
+.subheading {
+  @apply font-bold text-[32px] leading-[48px] text-[#00004e] w-full;
+}
+
+.storeRow {
+  @apply flex flex-wrap gap-2.5 items-center;
+}
+
+.storeItem {
+  @apply flex items-center justify-center cursor-pointer;
+}
+
+.storeItem img {
+  @apply h-[34px] w-auto;
+}
+
+.storeItemFlipped {
+  @apply -scale-y-100;
+}
+
+/* phoneFrame */
+.phoneFrame {
+  @apply absolute pointer-events-none;
+  top: 0;
+  left: 572px;
+  width: 261px;
+  height: 259px;
+}
+
+/* phoneImage */
+.phoneImage {
+  @apply absolute overflow-hidden pointer-events-none;
+  top: 0;
+  left: 402px;
+  width: 481px;
+  height: 259px;
+}
+
+/* ─── Mobile overrides ───────────────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .banner {
+    height: auto;
+    min-height: 200px;
+    @apply pb-4;
+  }
+
+  .content {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    @apply p-4 gap-2;
+  }
+
+  .heading {
+    @apply text-lg;
+  }
+
+  .subheading {
+    @apply text-xl leading-8;
+  }
+
+  .storeItem img {
+    @apply h-7;
+  }
+
+  /* Hide decorative phone frame/image on mobile — too narrow */
+  .phoneFrame,
+  .phoneImage {
+    @apply hidden;
+  }
+}

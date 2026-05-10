@@ -1,0 +1,88 @@
+@reference "#tailwind-global.css";
+
+.toolbar {
+  @apply flex items-center gap-4 w-full;
+}
+
+@media (max-width: 767px) {
+  .toolbar {
+    @apply gap-2;
+  }
+}
+
+.grid {
+  @apply grid gap-6 w-full;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 767px) {
+  .grid {
+    @apply gap-3;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.card {
+  @apply flex flex-col gap-5 items-center justify-center rounded-[20px] p-6 text-center cursor-pointer transition-opacity duration-200 hover:opacity-80;
+  background-color: rgba(51, 65, 87, 0.7);
+  min-height: 245px;
+}
+
+@media (max-width: 767px) {
+  .card {
+    @apply gap-3 p-4 rounded-2xl;
+    min-height: 140px;
+  }
+}
+
+.iconWrapper {
+  @apply relative shrink-0 size-11;
+}
+
+@media (max-width: 767px) {
+  .iconWrapper {
+    @apply size-9;
+  }
+}
+
+.iconImg {
+  @apply absolute block size-full;
+}
+
+.cardLabel {
+  @apply text-white text-center;
+  font-family: 'Ping AR + LT', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+@media (max-width: 767px) {
+  .cardLabel {
+    font-size: 13px;
+    line-height: 20px;
+  }
+}
+
+/* Avatar card (Ask the secretary) */
+.avatarFrame {
+  @apply relative border border-[#8080a6] rounded-full overflow-hidden shrink-0;
+  width: 49px;
+  height: 50px;
+  background-color: #bfbfd3;
+}
+
+@media (max-width: 767px) {
+  .avatarFrame {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.avatarImg {
+  @apply absolute;
+  height: 92.62%;
+  left: -8.06%;
+  top: 8.49%;
+  width: 115.05%;
+}

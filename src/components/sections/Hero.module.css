@@ -1,0 +1,421 @@
+@reference "#tailwind-global.css";
+
+/* ─── Layout ─────────────────────────────────────────────── */
+
+.root {
+  @apply flex gap-8 items-start relative w-full;
+}
+
+.mainColumn {
+  @apply flex flex-col gap-8 items-start shrink-0 w-[922px];
+}
+
+/* ─── Main card ──────────────────────────────────────────── */
+
+.mainCard {
+  @apply bg-[rgba(51,65,87,0.3)] flex flex-col items-start p-10 rounded-[20px] w-full;
+}
+
+/* ─── Tabs ───────────────────────────────────────────────── */
+
+.tabBar {
+  @apply flex gap-11 items-start border-b border-[#e5e7ea] pt-3 w-full;
+}
+
+.tabActive {
+  @apply flex items-center justify-center gap-2 h-8 pb-6 px-1 border-b-2 border-[#00bf00]
+    font-bold text-lg leading-[26px] text-white whitespace-nowrap cursor-pointer;
+}
+
+.tabInactive {
+  @apply flex items-center justify-center gap-2 h-8 pb-6 px-1
+    text-[18px] leading-[26px] text-[#e5e7ea] whitespace-nowrap cursor-pointer;
+  font-family: "Ping AR + LT", sans-serif;
+  font-weight: 400;
+}
+
+/* ─── Header row ─────────────────────────────────────────── */
+
+.headerRow {
+  @apply flex items-center justify-between w-full mt-6;
+}
+
+.slaButton {
+  @apply flex gap-2 items-center justify-center rounded-xl cursor-pointer;
+}
+
+.iconWrap28 {
+  @apply relative shrink-0 w-7 h-7;
+}
+
+/* ─── Steps grid ─────────────────────────────────────────── */
+
+.stepsGrid {
+  @apply relative mt-8;
+  display: inline-grid;
+  grid-template-columns: max-content;
+  grid-template-rows: max-content;
+  place-items: start;
+  min-height: 170px;
+  width: 842px;
+}
+
+.stepsGrid > * {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.stepCard {
+  @apply bg-[#334157] rounded-xl;
+  width: 188.686px;
+  height: 139px;
+  margin-top: 15px;
+}
+
+.stepText {
+  @apply absolute text-base leading-6 text-white;
+  font-family: "Ping AR + LT", sans-serif;
+  font-weight: 400;
+}
+
+.stepLabel {
+  @apply absolute flex items-center justify-center rounded-[7.923px];
+  width: 129.714px;
+  height: 30.271px;
+  top: 0;
+}
+
+.stepLabel span {
+  @apply text-center;
+  font-family: "Ping AR + LT", sans-serif;
+  font-weight: 500;
+  font-size: 14.086px;
+  line-height: 21.129px;
+}
+
+.stepLabelGreen {
+  @apply bg-[#00bf00];
+  margin-left: 40.06px;
+}
+
+.stepLabelGreen span {
+  @apply text-[#00004e];
+}
+
+.stepLabelPurple {
+  @apply bg-[#a37dfc];
+  margin-left: 43.22px;
+}
+
+.stepLabelPurple span {
+  @apply text-[#00004e];
+}
+
+.stepLabelBlue {
+  @apply bg-[#0064ff];
+  margin-left: 47.84px;
+}
+
+.stepLabelBlue span {
+  @apply text-white;
+}
+
+.stepLabelDark {
+  @apply bg-[#00004e];
+  margin-left: 41.16px;
+}
+
+.stepLabelDark span {
+  @apply text-white;
+}
+
+.arrowWrap {
+  @apply absolute;
+  grid-column: 1;
+  grid-row: 1;
+  top: 86px;
+  width: 28.584px;
+  height: 0;
+}
+
+.arrowWrap > * {
+  @apply absolute;
+  inset: -1px 0;
+}
+
+/* ─── Divider + Start service ────────────────────────────── */
+
+.dividerRow {
+  @apply flex gap-8 items-center w-full mt-8;
+}
+
+.dividerLine {
+  @apply relative h-0;
+  width: 555px;
+}
+
+.dividerLine > * {
+  @apply absolute;
+  inset: -1px 0 0 0;
+}
+
+.startServiceBtn {
+  @apply bg-[#00bf00] flex gap-2 items-center justify-center h-14 px-2 rounded-xl
+    font-medium text-lg leading-[26px] text-[#00004e] text-center whitespace-nowrap cursor-pointer;
+  width: 251px;
+  font-family: "Ping AR + LT", sans-serif;
+}
+
+/* ─── Content section ────────────────────────────────────── */
+
+.contentSection {
+  @apply flex flex-col gap-6 items-start w-full mt-8;
+}
+
+/* Video block */
+.videoBlock {
+  @apply relative rounded-3xl overflow-hidden shrink-0 w-full;
+  height: 377px;
+}
+
+.videoOverlay {
+  @apply absolute inset-0 bg-[#00004e] rounded-3xl;
+  opacity: 0.58;
+}
+
+.videoTitle {
+  @apply absolute font-medium text-xl leading-7 text-white text-right whitespace-nowrap;
+  top: 40px;
+  right: 45px;
+  font-family: "Ping AR + LT", sans-serif;
+}
+
+.playIconWrap {
+  @apply absolute;
+  top: 136px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95px;
+  height: 95px;
+}
+
+/* Info cards */
+.infoCard {
+  @apply bg-[rgba(51,65,87,0.2)] flex flex-col gap-4 items-start p-8 rounded-[20px] w-full;
+}
+
+.infoCardTitle {
+  @apply flex gap-2.5 items-center justify-center;
+}
+
+.infoCardIcon {
+  @apply relative shrink-0 w-[42px] h-[42px];
+}
+
+.infoCardList {
+  @apply flex flex-col gap-3 w-full list-disc;
+  padding-inline-start: 30px;
+  font-family: "Ping AR + LT", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  color: white;
+}
+
+.requirementsCard {
+  @apply bg-[rgba(51,65,87,0.2)] flex flex-col gap-4 items-start p-8 rounded-[20px] w-full;
+  min-height: 269px;
+}
+
+/* ─── CTA row ────────────────────────────────────────────── */
+
+.ctaRow {
+  @apply flex gap-6 items-center w-full mt-8;
+}
+
+.ctaDownload {
+  @apply bg-[#0064ff] flex flex-col gap-3 items-start justify-center
+    pl-[13px] pr-[18px] py-[25px] rounded-2xl shrink-0;
+  width: 409px;
+  height: 126px;
+}
+
+.ctaFaq {
+  @apply relative rounded-2xl shrink-0 overflow-hidden;
+  width: 408.844px;
+  height: 125.125px;
+  background-color: #a37dfc;
+}
+
+.ctaFaqInner {
+  @apply absolute flex flex-col gap-3 items-end justify-center;
+  top: 24.5px;
+  left: 24.12px;
+  width: 355.361px;
+  height: 77px;
+}
+
+.ctaLink {
+  @apply flex gap-2 items-center justify-center rounded-lg cursor-pointer;
+}
+
+.ctaLinkIcon {
+  @apply relative shrink-0 w-6 h-6;
+}
+
+/* ─── Related services ───────────────────────────────────── */
+
+.relatedSection {
+  @apply flex flex-col gap-2.5 items-end w-full mt-8;
+}
+
+.relatedTitle {
+  @apply font-bold text-xl leading-7 text-white w-full;
+  font-family: "Ping AR + LT", sans-serif;
+}
+
+.relatedGrid {
+  @apply flex gap-2 items-center justify-end w-full;
+}
+
+.relatedItem {
+  @apply bg-[rgba(51,65,87,0.3)] flex flex-col gap-2.5 items-start p-3 rounded-xl shrink-0;
+  width: 275px;
+}
+
+.relatedItemIcon {
+  @apply relative shrink-0 w-6 h-6;
+}
+
+.relatedItemText {
+  @apply font-bold text-base leading-7 text-white;
+  font-family: "Ping AR + LT", sans-serif;
+}
+
+/* ─── App banner ─────────────────────────────────────────── */
+
+.appBanner {
+  @apply relative rounded-3xl overflow-hidden shrink-0;
+  width: 922px;
+  height: 259px;
+  background-color: #a37dfc;
+}
+
+.appBannerContent {
+  @apply absolute flex flex-col gap-3 items-end;
+  top: 33px;
+  left: 52px;
+  width: 485px;
+}
+
+.appBannerHeadings {
+  @apply flex flex-col gap-3 items-end w-full;
+  font-family: "Ping AR + LT", sans-serif;
+}
+
+.appBannerStores {
+  @apply flex flex-wrap gap-2.5 items-center;
+}
+
+.appBannerPhoneOverlay {
+  @apply absolute;
+  top: 0;
+  left: 609px;
+  width: 261px;
+  height: 259px;
+}
+
+.appBannerPhone {
+  @apply absolute;
+  top: 0;
+  left: 402px;
+  width: 481px;
+  height: 259px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* ─── Sidebar ────────────────────────────────────────────── */
+
+.sidebar {
+  @apply flex flex-col gap-8 items-start shrink-0;
+  width: 286px;
+}
+
+.sidebarTile {
+  @apply bg-[rgba(51,65,87,0.3)] flex flex-col gap-2 items-start overflow-hidden
+    px-4 py-6 rounded-2xl w-full;
+}
+
+.sidebarTileHighlight {
+  @apply bg-[#0064ff];
+}
+
+.tileIcon {
+  @apply relative shrink-0 w-8 h-8;
+}
+
+.tileIcon img {
+  @apply absolute inset-0 w-full h-full;
+}
+
+.tileLabel {
+  @apply text-xl leading-7 text-white;
+  font-family: "Ping AR + LT", sans-serif;
+  font-weight: 400;
+}
+
+.tileValue {
+  @apply text-xl leading-7 text-white;
+  font-family: "Ping AR + LT", sans-serif;
+}
+
+.tileValueGreen {
+  @apply font-medium text-xl leading-7 text-[#00bf00];
+  font-family: "Ping AR + LT", sans-serif;
+  min-width: 100%;
+}
+
+.tileListItem {
+  @apply list-disc text-xl leading-7 text-white font-medium;
+  font-family: "Ping AR + LT", sans-serif;
+  margin-inline-start: 30px;
+}
+
+/* Stars row */
+.starsRow {
+  @apply relative shrink-0;
+  width: 242px;
+  height: 36.4px;
+}
+
+.starsRow img {
+  @apply absolute inset-0 w-full h-full;
+}
+
+.ratingText {
+  @apply font-medium text-lg leading-[26px] text-[#e5e7ea];
+  font-family: "Ping AR + LT", sans-serif;
+  min-width: 100%;
+}
+
+/* Customer service tile */
+.customerServiceTile {
+  @apply bg-[rgba(51,65,87,0.3)] flex flex-col gap-2 items-end overflow-hidden
+    px-4 py-6 rounded-2xl w-full;
+  min-height: 509px;
+}
+
+.csNumbers {
+  @apply font-medium text-xl text-[#808896] min-w-full;
+  font-family: "Ping AR + LT", sans-serif;
+}
+
+.csNumbers p {
+  @apply leading-[42px] mb-0;
+}
+
+.csHours {
+  @apply bg-[rgba(255,255,255,0.07)] flex flex-col gap-3 items-center justify-center
+    px-4 py-6 rounded-lg w-full mt-auto;
+}

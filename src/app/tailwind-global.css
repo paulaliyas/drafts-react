@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  --color-sand-50: #faf8f4;
+  --color-sand-100: #f2ede3;
+  --color-sand-200: #e5dbc8;
+  --color-sand-300: #d3c4a4;
+  --color-sand-400: #bfa87a;
+  --color-sand-500: #a88d56;
+  --color-sand-600: #8c7244;
+  --color-sand-700: #6e5934;
+  --color-sand-800: #4f3f26;
+  --color-sand-900: #30271a;
+  --color-ink: #1a1410;
+  --color-ink-muted: #4a3f35;
+  --color-cream: #faf8f4;
+
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}

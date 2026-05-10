@@ -1,0 +1,15 @@
+@reference "#tailwind-global.css";
+
+.layout {
+  @apply flex gap-8 items-start w-full;
+}
+
+/* Mobile: stack vertically */
+@media (max-width: 768px) {
+  .layout {
+    @apply flex-col gap-6;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}

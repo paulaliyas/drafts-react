@@ -1,0 +1,63 @@
+@reference "#tailwind-global.css";
+
+.wrapper {
+  @apply flex flex-col gap-8 items-end w-full;
+}
+
+/* ── Tab section ── */
+.tabSection {
+  @apply flex flex-col gap-6 items-end w-full;
+}
+
+.tabBar {
+  @apply border-b border-[#e5e7ea] flex flex-col items-start pt-3 w-full;
+}
+
+.tabList {
+  @apply flex gap-11 items-start;
+}
+
+.tabActive {
+  @apply border-b-2 border-[#00bf00] flex gap-2 h-8 items-center justify-center pb-6 px-1;
+}
+
+.tabActiveLabel {
+  @apply font-bold leading-[26px] text-[18px] text-white whitespace-nowrap;
+  font-family: "Ping AR + LT", sans-serif;
+}
+
+.tabInactive {
+  @apply flex gap-2 h-8 items-center justify-center pb-6 px-1;
+}
+
+.tabInactiveLabel {
+  @apply font-normal leading-[26px] text-[18px] text-[#e5e7ea] whitespace-nowrap;
+  font-family: "Ping AR + LT", sans-serif;
+}
+
+/* ── Section header banners ── */
+.bannerGreen {
+  @apply flex h-[59px] items-center px-[22px] rounded-[12px] w-full;
+  background-color: #33cc33;
+}
+
+.bannerPurple {
+  @apply flex h-[59px] items-center px-[22px] rounded-[12px] w-full;
+  background-color: #a37dfc;
+}
+
+.bannerLabel {
+  @apply font-bold leading-7 text-[20px] text-[#00122d] text-right whitespace-nowrap;
+  font-family: "Ping AR + LT", sans-serif;
+}
+
+/* ── Flowchart image container ── */
+.flowchartContainer {
+  @apply flex items-center justify-center w-full overflow-x-auto;
+}
+
+.flowchartImage {
+  @apply block max-w-full h-auto;
+  /* Preserve aspect ratio; let it scroll horizontally on small screens */
+  min-width: 464px;
+}

@@ -1,0 +1,63 @@
+@reference "#tailwind-global.css";
+
+.tile {
+  @apply bg-[rgba(51,65,87,0.3)] flex flex-col gap-2 items-end overflow-hidden
+    px-4 py-6 rounded-2xl w-full;
+}
+
+.icon {
+  @apply relative shrink-0 w-8 h-8;
+}
+
+.label {
+  @apply font-medium text-xl leading-8 text-white;
+  font-family: "Ping AR + LT", sans-serif;
+  min-width: 100%;
+}
+
+.contactList {
+  @apply flex flex-col gap-0 min-w-full;
+  font-family: "Ping AR + LT", sans-serif;
+}
+
+.contactRegion {
+  @apply font-medium text-xl leading-[42px] text-[#808896];
+}
+
+.contactPhone {
+  @apply font-medium text-xl leading-[42px] text-[#808896];
+}
+
+.hoursBox {
+  @apply bg-[rgba(255,255,255,0.07)] flex flex-col gap-3 items-start
+    px-4 py-6 rounded-lg w-full mt-2;
+}
+
+.hoursTitle {
+  @apply font-medium text-xl leading-7 text-white w-full;
+  font-family: "Ping AR + LT", sans-serif;
+}
+
+.hoursRow {
+  @apply font-normal text-xl leading-7 text-white w-full;
+  font-family: "Ping AR + LT", sans-serif;
+}
+
+@media (max-width: 768px) {
+  .label,
+  .contactRegion,
+  .contactPhone,
+  .hoursTitle,
+  .hoursRow {
+    @apply text-base leading-7;
+  }
+
+  .contactRegion,
+  .contactPhone {
+    line-height: 32px;
+  }
+
+  .hoursBox {
+    @apply px-3 py-4 gap-2;
+  }
+}

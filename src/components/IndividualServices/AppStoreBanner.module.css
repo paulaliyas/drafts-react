@@ -1,0 +1,118 @@
+@reference "#tailwind-global.css";
+
+/* ── Outer card ── */
+.card {
+  @apply relative w-full overflow-hidden;
+  background-color: #a37dfc;
+  border-radius: 24px;
+  /* height must accommodate text block + phone overlay */
+  min-height: 485px;
+}
+
+/* ── Phone mockup layers (bottom of card) ── */
+/* Layer 1: SVG frame decoration */
+.phoneBg {
+  @apply absolute pointer-events-none;
+  bottom: 0;
+  left: 0;
+  width: 261px;
+  height: 283px;
+}
+
+.phoneBgImg {
+  @apply absolute inset-0 w-full h-full object-contain;
+}
+
+/* Layer 2: actual phone photo — same bottom-left anchor */
+.phoneHero {
+  @apply absolute pointer-events-none overflow-hidden;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 259px;
+  border-radius: 23px;
+}
+
+.phoneHeroImg {
+  @apply absolute;
+  width: 126.91%;
+  height: 143.24%;
+  top: -7.34%;
+  left: -19.73%;
+  object-fit: cover;
+}
+
+/* ── Text content (top of card) ── */
+.content {
+  @apply relative flex flex-col items-end;
+  gap: 12px;
+  padding: 31px 35px 0 35px;
+}
+
+.subtitle {
+  @apply w-full;
+  direction: rtl;
+  color: #00004e;
+  font-family: 'Ping AR + LT', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.heading {
+  @apply w-full;
+  direction: rtl;
+  color: #00004e;
+  font-family: 'Ping AR + LT', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 48px;
+}
+
+/* ── Store buttons row ── */
+.storeButtons {
+  @apply flex flex-wrap items-center justify-end w-full;
+  gap: 8px 10px;
+  padding-top: 8px;
+}
+
+.storeBtn {
+  @apply relative flex-shrink-0 cursor-pointer;
+  transition: opacity 0.2s;
+}
+
+.storeBtn:hover {
+  opacity: 0.85;
+}
+
+/* ── Mobile ── */
+@media (max-width: 767px) {
+  .card {
+    min-height: 340px;
+    border-radius: 20px;
+  }
+
+  .content {
+    padding: 20px 20px 0 20px;
+    gap: 8px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .heading {
+    font-size: 22px;
+    line-height: 34px;
+  }
+
+  .phoneBg {
+    width: 170px;
+    height: 185px;
+  }
+
+  .phoneHero {
+    height: 180px;
+    border-radius: 16px;
+  }
+}

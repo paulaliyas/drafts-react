@@ -1,0 +1,15 @@
+@reference "#tailwind-global.css";
+
+.footer {
+  @apply border-t border-sand-200 bg-sand-50 px-8 py-10;
+  @apply flex flex-col md:flex-row items-center justify-between gap-4;
+}
+
+.brand {
+  @apply font-[family-name:var(--font-display)] text-lg font-bold text-ink;
+}
+
+.copy {
+  @apply text-sm text-ink-muted;
+  font-family: var(--font-body);
+}

@@ -1,0 +1,185 @@
+@reference "#tailwind-global.css";
+
+/* ─── Section wrapper ────────────────────────────────────────────────────────── */
+
+.section {
+  @apply flex flex-col gap-8 items-start w-full;
+}
+
+/* ─── Header ─────────────────────────────────────────────────────────────────── */
+
+.sectionHeader {
+  @apply flex items-center justify-between w-full;
+}
+
+.sectionHeader p {
+  @apply font-bold text-2xl leading-[34px] text-white;
+  font-family: "Ping AR + LT", sans-serif;
+}
+
+.slaBtn {
+  @apply flex gap-2 items-center justify-center rounded-xl cursor-pointer;
+}
+
+.slaBtn span {
+  @apply underline text-white text-lg leading-[26px];
+  font-family: "Ping AR + LT", sans-serif;
+  font-weight: 500;
+}
+
+.slaIcon {
+  @apply w-7 h-7;
+}
+
+/* ─── Steps row (desktop) ──────────────────────────────────────────────────── */
+
+.stepsRow {
+  @apply flex flex-row items-center w-full;
+  padding-top: 15px;
+}
+
+/* ── Card ──────────────────────────────────────────────────────────────────── */
+.stepCard {
+  @apply relative flex flex-col flex-1;
+  min-width: 0;
+  height: 139px;
+  border-radius: 12px;
+  background-color: #334157;
+  overflow: visible;
+}
+
+/* ── Badge ─────────────────────────────────────────────────────────────────── */
+.badge {
+  @apply absolute flex items-center justify-center;
+  width: auto;
+  min-width: fit-content;
+  height: 30.271px;
+  border-radius: 7.923px;
+  left: 50%;
+  top: -15px;
+  padding: 0 12px;
+}
+
+.badgeNavy   { background-color: #00004e; }
+.badgeBlue   { background-color: #0064ff; }
+.badgePurple { background-color: #a37dfc; }
+.badgeGreen  { background-color: #00bf00; }
+
+.badgeText {
+  @apply text-center whitespace-nowrap;
+  font-family: "Ping AR + LT", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14.086px;
+  line-height: 21.129px;
+}
+
+.badgeNavy .badgeText,
+.badgeBlue .badgeText  { color: #ffffff; }
+
+.badgePurple .badgeText,
+.badgeGreen .badgeText  { color: #00004e; }
+
+/* ── Card body text ──────────────────────────────────────────────────────────── */
+.cardBody {
+  @apply w-full overflow-hidden;
+  margin-top: 31px;
+  padding: 0 13px;
+  font-family: "Ping AR + LT", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+/* ── Connector (desktop horizontal) ─────────────────────────────────────────── */
+.connector {
+  @apply flex-shrink-0 flex items-center justify-center;
+  width: 28.584px;
+  height: 2px;
+  border-top: 2px dashed white;
+}
+
+/* ── Vertical connector (mobile) ─────────────────────────────────────────────── */
+.connectorVertical {
+  @apply hidden flex-shrink-0 self-center;
+  width: 2px;
+  height: 24px;
+  border-left: 2px dashed white;
+}
+
+/* ─── Divider + Start Service ────────────────────────────────────────────────── */
+
+.dividerRow {
+  @apply flex gap-8 items-center w-full;
+}
+
+.dividerLine {
+  @apply flex-1 h-px;
+  border-top: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.startBtn {
+  @apply bg-[#00bf00] flex items-center justify-center h-14 px-8 rounded-xl
+    font-medium text-lg leading-[26px] text-[#00004e] text-center whitespace-nowrap
+    cursor-pointer transition-opacity hover:opacity-90 shrink-0;
+  font-family: "Ping AR + LT", sans-serif;
+  min-width: 251px;
+}
+
+/* ─── Mobile overrides ───────────────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .section {
+    @apply gap-4;
+  }
+
+  /* Steps stack vertically */
+  .stepsRow {
+    @apply flex-col items-stretch gap-0;
+    padding-top: 15px;
+  }
+
+  /* Each card takes full width, fixed height removed */
+  .stepCard {
+    @apply w-full;
+    height: auto;
+    min-height: 90px;
+    flex: none;
+  }
+
+  .cardBody {
+    margin-top: 28px;
+    padding: 0 12px 12px;
+  }
+
+  /* Hide horizontal connector, show vertical */
+  .connector {
+    @apply hidden;
+  }
+
+  .connectorVertical {
+    @apply flex mx-auto;
+  }
+
+  /* Badge centered on mobile */
+  .badge {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Divider row: stack button full width */
+  .dividerRow {
+    @apply flex-col gap-4;
+  }
+
+  .dividerLine {
+    @apply w-full;
+  }
+
+  .startBtn {
+    @apply w-full;
+    min-width: unset;
+  }
+}

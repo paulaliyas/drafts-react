@@ -1,0 +1,21 @@
+@reference "#tailwind-global.css";
+
+.column {
+  @apply flex flex-col gap-8 items-start min-w-0;
+  flex: 3;
+}
+
+.mainCard {
+  @apply bg-[rgba(51,65,87,0.3)] flex flex-col gap-8 items-start p-10 rounded-[20px] w-full;
+}
+
+@media (max-width: 768px) {
+  .column {
+    @apply w-full;
+    flex: none;
+  }
+
+  .mainCard {
+    @apply p-4 gap-6;
+  }
+}

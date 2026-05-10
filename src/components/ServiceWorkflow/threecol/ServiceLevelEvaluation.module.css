@@ -1,0 +1,43 @@
+@reference "#tailwind-global.css";
+
+.tile {
+  @apply bg-[#0064ff] flex flex-col gap-2 items-start overflow-hidden px-4 py-6 rounded-2xl w-full;
+}
+
+.icon {
+  @apply relative shrink-0 w-8 h-8;
+}
+
+.label {
+  @apply text-xl leading-7 text-white;
+  font-family: "Ping AR + LT", sans-serif;
+  font-weight: 400;
+  min-width: 100%;
+}
+
+.starsWrap {
+  @apply relative shrink-0;
+  width: 242px;
+  height: 36.4px;
+}
+
+.ratingCount {
+  @apply font-medium text-lg leading-[26px] text-[#e5e7ea];
+  font-family: "Ping AR + LT", sans-serif;
+  min-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .label {
+    @apply text-base leading-6;
+  }
+
+  .starsWrap {
+    width: 180px;
+    height: 27px;
+  }
+
+  .ratingCount {
+    @apply text-sm leading-5;
+  }
+}
