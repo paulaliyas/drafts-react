@@ -1,14 +1,11 @@
 'use client';
 
 import { useMemo } from 'react';
-import ServicesSearchBar from './ServicesSearchBar';
-import ServicesFilterBar from './ServicesFilterBar';
 import { cardsByTab, type ServiceCard } from './serviceCardsData';
 import type { ServiceTab } from './ServicesSubjectToTabs';
 import styles from './ServicesCardsGrid.module.css';
 
 const {
-  toolbar,
   grid,
   card,
   iconWrapper,
@@ -21,25 +18,16 @@ const {
 interface ServicesCardsGridProps {
   activeTab?: ServiceTab;
   onCardClick?: (id: string) => void;
-  onFilterClick?: () => void;
 }
 
 export default function ServicesCardsGrid({
   activeTab = 'social',
   onCardClick,
-  onFilterClick,
 }: ServicesCardsGridProps) {
-  // Derive the correct card list whenever the active tab changes
   const cards: ServiceCard[] = useMemo(() => cardsByTab[activeTab], [activeTab]);
 
   return (
     <div className="flex flex-col gap-6 w-full">
-      {/* Toolbar: search + filter */}
-      <div className={toolbar}>
-        <ServicesSearchBar />
-        <ServicesFilterBar onFilterClick={onFilterClick} />
-      </div>
-
       {/* Cards grid — re-renders with new cards when tab changes */}
       <div className={grid}>
         {cards.map((item) => (

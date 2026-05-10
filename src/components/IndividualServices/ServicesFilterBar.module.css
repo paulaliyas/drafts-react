@@ -1,20 +1,13 @@
 @reference "#tailwind-global.css";
 
 .filterBar {
-  @apply flex items-center justify-between h-[49px] px-5 rounded-[40px] border border-[#334157] cursor-pointer shrink-0;
+  @apply flex items-center justify-between h-[52px] px-5 rounded-full cursor-pointer w-full;
   background-color: rgba(255, 255, 255, 0.1);
-  min-width: 200px;
-}
-
-@media (max-width: 767px) {
-  .filterBar {
-    @apply h-[44px] px-4;
-    min-width: unset;
-  }
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .left {
-  @apply flex items-center gap-[11px];
+  @apply flex items-center gap-2;
 }
 
 .iconWrapper {
@@ -36,15 +29,9 @@
 }
 
 .label {
-  @apply text-white text-right whitespace-nowrap;
+  @apply text-white whitespace-nowrap;
   font-family: 'Ping AR + LT', sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
   line-height: 22px;
-}
-
-@media (max-width: 767px) {
-  .label {
-    @apply hidden;
-  }
 }

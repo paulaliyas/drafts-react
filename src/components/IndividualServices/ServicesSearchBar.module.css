@@ -1,15 +1,10 @@
 @reference "#tailwind-global.css";
 
 .searchField {
-  @apply flex items-center gap-2 h-12 px-4 rounded-[40px] border border-[#334157] w-full cursor-text;
-  background-color: rgba(255, 255, 255, 0.07);
+  @apply flex items-center justify-between gap-2 h-[52px] px-5 rounded-full w-full cursor-text;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   overflow: hidden;
-}
-
-@media (max-width: 767px) {
-  .searchField {
-    @apply h-[44px];
-  }
 }
 
 .iconWrapper {
@@ -24,10 +19,9 @@
 }
 
 .placeholder {
-  @apply whitespace-nowrap;
-  color: #808896;
+  @apply whitespace-nowrap text-white;
   font-family: 'Ping AR + LT', sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
   line-height: 22px;
 }

@@ -14,6 +14,17 @@
   @apply w-full;
 }
 
+/* Search + filter: mobile only — between tabs and layout */
+.mobileToolbar {
+  @apply hidden;
+}
+
+@media (max-width: 767px) {
+  .mobileToolbar {
+    @apply flex flex-row gap-3 w-full;
+  }
+}
+
 /* Desktop: 3-col sidebar + 9-col main */
 .layout {
   @apply w-full items-start;
@@ -22,7 +33,7 @@
   gap: 24px;
 }
 
-/* Mobile: single column — force full width on both children */
+/* Mobile: single column */
 @media (max-width: 767px) {
   .layout {
     display: flex;
@@ -53,8 +64,18 @@
   }
 }
 
-/* SearchFaster + AppStore inside sidebar:
-   visible on desktop, hidden on mobile */
+/* Search + filter: desktop only — above cards inside main */
+.desktopToolbar {
+  @apply flex flex-row gap-3 w-full;
+}
+
+@media (max-width: 767px) {
+  .desktopToolbar {
+    @apply hidden;
+  }
+}
+
+/* SearchFaster + AppStore: desktop sidebar only */
 .sidebarCards {
   @apply flex flex-col gap-6;
 }
@@ -65,8 +86,7 @@
   }
 }
 
-/* SearchFaster + AppStore below cards:
-   hidden on desktop, visible on mobile */
+/* SearchFaster + AppStore: mobile only — below cards */
 .belowCardsMobile {
   @apply hidden;
 }

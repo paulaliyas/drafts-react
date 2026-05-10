@@ -18,19 +18,16 @@ export default function ServicesSearchBar({
 }: ServicesSearchBarProps) {
   return (
     <div className={searchField}>
-      <div className={iconWrapper}>
-        <img alt="" src={imgMagnifyingGlass} className={iconImg} />
-      </div>
       {onChange ? (
         <input
           type="text"
           value={value}
           onChange={(e) => onChange(e.target.value)}
           placeholder={placeholderText}
-          className="flex-1 bg-transparent outline-none text-white min-w-0"
+          className="flex-1 bg-transparent outline-none text-white min-w-0 text-right"
           style={{
             fontFamily: "'Ping AR + LT', sans-serif",
-            fontSize: '14px',
+            fontSize: '15px',
             lineHeight: '22px',
             color: 'white',
           }}
@@ -38,6 +35,9 @@ export default function ServicesSearchBar({
       ) : (
         <p className={placeholder}>{placeholderText}</p>
       )}
+      <div className={iconWrapper}>
+        <img alt="" src={imgMagnifyingGlass} className={iconImg} />
+      </div>
     </div>
   );
 }

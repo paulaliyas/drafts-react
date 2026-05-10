@@ -14,16 +14,16 @@ interface ServicesFilterBarProps {
 export default function ServicesFilterBar({ onFilterClick }: ServicesFilterBarProps) {
   return (
     <button type="button" className={filterBar} onClick={onFilterClick}>
+      <div className={iconWrapper}>
+        <img alt="" src={imgCaretDown} className={caretImg} />
+      </div>
       <div className={left}>
+        <span className={label} dir="auto">
+         Filter by
+        </span>
         <div className={iconWrapper}>
           <img alt="" src={imgSlidersHorizontal} className={sliderImg} />
         </div>
-        <span className={label} dir="auto">
-          Filter by
-        </span>
-      </div>
-      <div className={iconWrapper}>
-        <img alt="" src={imgCaretDown} className={caretImg} />
       </div>
     </button>
   );
