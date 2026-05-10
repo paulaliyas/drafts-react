@@ -69,12 +69,20 @@
 }
 
 .navLink {
-  @apply px-3 py-1.5 rounded-md text-sm transition-all duration-150;
+  @apply px-3 py-1.5 rounded-md text-sm transition-all duration-150 cursor-pointer;
   color: var(--text-secondary);
   text-decoration: none;
+  background: transparent;
+  border: none;
+  font-family: inherit;
 }
 
 .navLink:hover {
+  color: var(--text-primary);
+  background: var(--border);
+}
+
+.navLinkActive {
   color: var(--text-primary);
   background: var(--border);
 }

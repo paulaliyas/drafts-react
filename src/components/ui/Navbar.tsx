@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import ServiceWorkflow from "../ServiceWorkflow/ServiceWorkflow";
+import ServicesPage from "../IndividualServices/ServicesPage";
 import styles from "./Navbar.module.css";
 
 const {
@@ -26,27 +27,28 @@ const {
 
 type Lang = "en" | "ar";
 type Theme = "light" | "dark";
+type View = "workflow" | "profile";
+
+const navLinks: { label: { en: string; ar: string }; view: View }[] = [
+  { label: { en: "Service Workflow", ar: "سير العمل" }, view: "workflow" },
+  { label: { en: "Profile", ar: "الملف الشخصي" }, view: "profile" },
+];
 
 const copy = {
   en: {
-    logoText: "Nexus",
-    links: ["Services", "Solutions", "About", "Contact"],
+    logoText: "Next JS",
     cta: "Get Started",
-    langLabel: "EN",
-    altLang: "AR",
   },
   ar: {
     logoText: "نيكسس",
-    links: ["الخدمات", "الحلول", "من نحن", "تواصل معنا"],
     cta: "ابدأ الآن",
-    langLabel: "AR",
-    altLang: "EN",
   },
 };
 
 export function Navbar() {
   const [lang, setLang] = useState<Lang>("en");
   const [theme, setTheme] = useState<Theme>("light");
+  const [view, setView] = useState<View>("workflow");
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
@@ -67,8 +69,17 @@ export function Navbar() {
         <div className={navLeft}>
           <div className={logoMark}>
             <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-              <path d="M14 2L26 8V20L14 26L2 20V8L14 2Z" stroke="currentColor" strokeWidth="1.5" fill="none" />
-              <path d="M14 7L21 11V17L14 21L7 17V11L14 7Z" fill="currentColor" opacity="0.3" />
+              <path
+                d="M14 2L26 8V20L14 26L2 20V8L14 2Z"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                fill="none"
+              />
+              <path
+                d="M14 7L21 11V17L14 21L7 17V11L14 7Z"
+                fill="currentColor"
+                opacity="0.3"
+              />
             </svg>
           </div>
           <span className={logoText}>{t.logoText}</span>
@@ -76,10 +87,14 @@ export function Navbar() {
 
         {/* Nav Links */}
         <div className={navCenter}>
-          {t.links.map((label) => (
-            <a key={label} href="#" className={navLink}>
-              {label}
-            </a>
+          {navLinks.map((link) => (
+            <button
+              key={link.view}
+              className={`${navLink} ${view === link.view ? styles.navLinkActive : ""}`}
+              onClick={() => setView(link.view)}
+            >
+              {link.label[lang]}
+            </button>
           ))}
         </div>
 
@@ -113,12 +128,26 @@ export function Navbar() {
             <span className={themeIcon}>
               {theme === "light" ? (
                 // Moon icon
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
                   <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z" />
                 </svg>
               ) : (
                 // Sun icon
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
                   <circle cx="12" cy="12" r="5" />
                   <line x1="12" y1="1" x2="12" y2="3" />
                   <line x1="12" y1="21" x2="12" y2="23" />
@@ -133,14 +162,12 @@ export function Navbar() {
             </span>
           </button>
 
-          {/* CTA */}
-          <button className={ctaBtn}>{t.cta}</button>
         </div>
       </nav>
 
       {/* Page Content */}
       <div className={content}>
-        <ServiceWorkflow />
+        {view === "workflow" ? <ServiceWorkflow /> : <ServicesPage />}
       </div>
     </div>
   );
