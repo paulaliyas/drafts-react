@@ -2,8 +2,8 @@
 
 .filterBar {
   @apply flex items-center justify-between h-[52px] px-5 rounded-full cursor-pointer w-full;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: var(--surface);
+  border: 1px solid var(--border);
 }
 
 .left {
@@ -29,7 +29,8 @@
 }
 
 .label {
-  @apply text-white whitespace-nowrap;
+  @apply whitespace-nowrap;
+  color: var(--text-secondary);
   font-family: 'Ping AR + LT', sans-serif;
   font-size: 15px;
   font-weight: 400;

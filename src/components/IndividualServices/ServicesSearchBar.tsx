@@ -24,12 +24,12 @@ export default function ServicesSearchBar({
           value={value}
           onChange={(e) => onChange(e.target.value)}
           placeholder={placeholderText}
-          className="flex-1 bg-transparent outline-none text-white min-w-0 text-right"
+          className="flex-1 bg-transparent outline-none min-w-0 text-right"
           style={{
             fontFamily: "'Ping AR + LT', sans-serif",
             fontSize: '15px',
             lineHeight: '22px',
-            color: 'white',
+            color: 'var(--text-primary)',
           }}
         />
       ) : (

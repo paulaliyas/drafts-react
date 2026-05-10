@@ -2,8 +2,8 @@
 
 .searchField {
   @apply flex items-center justify-between gap-2 h-[52px] px-5 rounded-full w-full cursor-text;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: var(--surface);
+  border: 1px solid var(--border);
   overflow: hidden;
 }
 
@@ -19,7 +19,8 @@
 }
 
 .placeholder {
-  @apply whitespace-nowrap text-white;
+  @apply whitespace-nowrap;
+  color: var(--text-secondary);
   font-family: 'Ping AR + LT', sans-serif;
   font-size: 15px;
   font-weight: 400;
