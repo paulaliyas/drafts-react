@@ -13,7 +13,8 @@
 }
 
 .sectionHeader p {
-  @apply font-bold text-2xl leading-[34px] text-white;
+  @apply font-bold text-2xl leading-[34px];
+  color: var(--card-text);
   font-family: "Ping AR + LT", sans-serif;
 }
 
@@ -22,7 +23,8 @@
 }
 
 .slaBtn span {
-  @apply underline text-white text-lg leading-[26px];
+  @apply underline text-lg leading-[26px];
+  color: var(--card-text);
   font-family: "Ping AR + LT", sans-serif;
   font-weight: 500;
 }
@@ -44,7 +46,7 @@
   min-width: 0;
   height: 139px;
   border-radius: 12px;
-  background-color: #334157;
+  background-color: var(--step-card-bg);
   overflow: visible;
 }
 
@@ -90,7 +92,7 @@
   font-style: normal;
   font-size: 16px;
   line-height: 24px;
-  color: #ffffff;
+  color: var(--card-text);
 }
 
 /* ── Connector (desktop horizontal) ─────────────────────────────────────────── */
@@ -98,7 +100,7 @@
   @apply flex-shrink-0 flex items-center justify-center;
   width: 28.584px;
   height: 2px;
-  border-top: 2px dashed white;
+  border-top: 2px dashed var(--card-text);
 }
 
 /* ── Vertical connector (mobile) ─────────────────────────────────────────────── */
@@ -106,7 +108,7 @@
   @apply hidden flex-shrink-0 self-center;
   width: 2px;
   height: 24px;
-  border-left: 2px dashed white;
+  border-left: 2px dashed var(--card-text);
 }
 
 /* ─── Divider + Start Service ────────────────────────────────────────────────── */
@@ -117,7 +119,7 @@
 
 .dividerLine {
   @apply flex-1 h-px;
-  border-top: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid var(--rule);
 }
 
 .startBtn {

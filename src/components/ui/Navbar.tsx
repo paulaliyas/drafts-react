@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useTheme } from "@/context/ThemeProvider";
 import ServiceWorkflow from "../ServiceWorkflow/ServiceWorkflow";
 import ServicesPage from "../IndividualServices/ServicesPage";
 import styles from "./Navbar.module.css";
@@ -26,7 +27,6 @@ const {
 } = styles;
 
 type Lang = "en" | "ar";
-type Theme = "light" | "dark";
 type View = "workflow" | "profile";
 
 const navLinks: { label: { en: string; ar: string }; view: View }[] = [
@@ -47,12 +47,8 @@ const copy = {
 
 export function Navbar() {
   const [lang, setLang] = useState<Lang>("en");
-  const [theme, setTheme] = useState<Theme>("light");
   const [view, setView] = useState<View>("workflow");
-
-  useEffect(() => {
-    document.documentElement.setAttribute("data-theme", theme);
-  }, [theme]);
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     document.documentElement.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
@@ -62,7 +58,7 @@ export function Navbar() {
   const isRtl = lang === "ar";
 
   return (
-    <div className={`${wrapper} ${theme === "dark" ? styles.dark : ""}`}>
+    <div className={wrapper}>
       {/* Navbar */}
       <nav className={`${navbar} ${isRtl ? rtl : ""}`}>
         {/* Logo */}
@@ -122,7 +118,7 @@ export function Navbar() {
           {/* Theme Toggle */}
           <button
             className={themeToggle}
-            onClick={() => setTheme((t) => (t === "light" ? "dark" : "light"))}
+            onClick={toggleTheme}
             aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
           >
             <span className={themeIcon}>

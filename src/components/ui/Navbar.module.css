@@ -1,32 +1,27 @@
 @reference "#tailwind-global.css";
 
-/* ── Theme tokens ─────────────────────────────────────── */
-.wrapper {
+/* ── Navbar-specific theme tokens ─────────────────────── */
+:root[data-theme="light"] .wrapper,
+:root:not([data-theme]) .wrapper {
   --bg: #f8f7f4;
-  --surface: #ffffff;
-  --border: #e5e2db;
-  --text-primary: #1a1814;
-  --text-secondary: #6b6560;
   --accent: #c8a96e;
   --accent-fg: #ffffff;
   --nav-blur: rgba(248, 247, 244, 0.88);
   --shadow: 0 1px 0 var(--border);
-
-  @apply min-h-screen transition-colors duration-300;
-  background-color: var(--bg);
-  color: var(--text-primary);
 }
 
-.wrapper.dark {
+:root[data-theme="dark"] .wrapper {
   --bg: #0f0e0c;
-  --surface: #1a1916;
-  --border: #2a2824;
-  --text-primary: #f0ede8;
-  --text-secondary: #8a8480;
   --accent: #c8a96e;
   --accent-fg: #0f0e0c;
   --nav-blur: rgba(15, 14, 12, 0.88);
   --shadow: 0 1px 0 var(--border);
+}
+
+.wrapper {
+  @apply min-h-screen transition-colors duration-300;
+  background-color: var(--bg);
+  color: var(--text-primary);
 }
 
 /* ── Navbar shell ─────────────────────────────────────── */

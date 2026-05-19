@@ -19,3 +19,66 @@
   --font-body: "DM Sans", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", monospace;
 }
+
+/* ── Global theme tokens ────────────────────────────────── */
+
+:root[data-theme="light"],
+:root:not([data-theme]) {
+  /* Shared surfaces (used by search/filter bars) */
+  --surface: #ffffff;
+  --border: #e5e2db;
+  --text-primary: #1a1814;
+  --text-secondary: #6b6560;
+
+  /* Content cards */
+  --card-bg: rgba(255, 255, 255, 0.92);
+  --card-bg-solid: rgba(51, 65, 87, 0.08);
+  --card-bg-hover: rgba(51, 65, 87, 0.14);
+  --card-text: #00004e;
+  --card-text-muted: #6b7280;
+  --card-border: rgba(51, 65, 87, 0.12);
+
+  /* Step cards */
+  --step-card-bg: #eef0f4;
+
+  /* Tab components */
+  --tab-track: #e8eaed;
+  --tab-inactive-text: #334157;
+  --tab-border-color: #c8cdd5;
+
+  /* List items */
+  --item-inactive-bg: rgba(51, 65, 87, 0.08);
+  --item-inactive-text: #334157;
+  --item-inactive-hover: rgba(51, 65, 87, 0.14);
+
+  /* Misc */
+  --rule: rgba(0, 0, 0, 0.12);
+  --hours-box-bg: rgba(51, 65, 87, 0.06);
+}
+
+:root[data-theme="dark"] {
+  --surface: #1a1916;
+  --border: #2a2824;
+  --text-primary: #f0ede8;
+  --text-secondary: #8a8480;
+
+  --card-bg: rgba(51, 65, 87, 0.3);
+  --card-bg-solid: rgba(51, 65, 87, 0.7);
+  --card-bg-hover: rgba(51, 65, 87, 0.5);
+  --card-text: #ffffff;
+  --card-text-muted: #808896;
+  --card-border: transparent;
+
+  --step-card-bg: #334157;
+
+  --tab-track: #334157;
+  --tab-inactive-text: #e5e7ea;
+  --tab-border-color: #e5e7ea;
+
+  --item-inactive-bg: rgba(128, 136, 150, 0.26);
+  --item-inactive-text: #ffffff;
+  --item-inactive-hover: rgba(128, 136, 150, 0.38);
+
+  --rule: rgba(255, 255, 255, 0.3);
+  --hours-box-bg: rgba(255, 255, 255, 0.07);
+}

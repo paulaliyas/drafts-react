@@ -10,7 +10,8 @@
 }
 
 .tabBar {
-  @apply border-b border-[#e5e7ea] flex flex-col items-start pt-3 w-full;
+  @apply border-b flex flex-col items-start pt-3 w-full;
+  border-color: var(--tab-border-color);
 }
 
 .tabList {
@@ -22,7 +23,8 @@
 }
 
 .tabActiveLabel {
-  @apply font-bold leading-[26px] text-[18px] text-white whitespace-nowrap;
+  @apply font-bold leading-[26px] text-[18px] whitespace-nowrap;
+  color: var(--card-text);
   font-family: "Ping AR + LT", sans-serif;
 }
 
@@ -31,7 +33,8 @@
 }
 
 .tabInactiveLabel {
-  @apply font-normal leading-[26px] text-[18px] text-[#e5e7ea] whitespace-nowrap;
+  @apply font-normal leading-[26px] text-[18px] whitespace-nowrap;
+  color: var(--tab-inactive-text);
   font-family: "Ping AR + LT", sans-serif;
 }
 

@@ -1,19 +1,23 @@
 @reference "#tailwind-global.css";
 
 .tabBar {
-  @apply flex gap-11 items-start border-b border-[#e5e7ea] pt-3 w-full;
+  @apply flex gap-11 items-start pt-3 w-full border-b;
+  border-color: var(--tab-border-color);
 }
 
 .tab {
   @apply flex items-center justify-center h-8 pb-6 px-1 cursor-pointer
-    text-[18px] leading-[26px] text-[#e5e7ea] whitespace-nowrap
+    text-[18px] leading-[26px] whitespace-nowrap
     border-b-2 border-transparent transition-colors;
+  color: var(--tab-inactive-text);
   font-family: "Ping AR + LT", sans-serif;
   font-weight: 400;
 }
 
 .tabIsActive {
-  @apply border-[#00bf00] text-white font-bold;
+  border-color: #00bf00;
+  color: var(--card-text);
+  font-weight: 700;
 }
 
 @media (max-width: 768px) {

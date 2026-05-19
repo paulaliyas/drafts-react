@@ -13,7 +13,8 @@
 }
 
 .title {
-  @apply text-white shrink-0;
+  @apply shrink-0;
+  color: var(--card-text);
   font-family: 'Ping AR + LT', sans-serif;
   font-size: 28px;
   font-weight: 700;
@@ -29,7 +30,7 @@
 
 .tabBar {
   @apply flex items-center gap-1 rounded-full p-1 shrink-0;
-  background-color: #334157;
+  background-color: var(--tab-track);
 }
 
 @media (max-width: 767px) {
@@ -46,9 +47,9 @@
 }
 
 .tabInactive {
-  @apply text-white;
+  color: var(--tab-inactive-text);
   font-weight: 500;
-  background-color: #334157;
+  background-color: var(--tab-track);
 }
 
 .tabActive {
