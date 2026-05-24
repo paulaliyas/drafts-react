@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import type { TabId } from "../types";
+import type { TabId, ServiceWorkflowData } from "../types";
 import * as A from "../assets";
 
 import ServiceTabs from "./ServiceTabs";
@@ -10,129 +10,83 @@ import ServiceSteps from "./ServiceSteps";
 import ServiceExplanation from "./ServiceExplanation";
 import RelatedServices from "./RelatedServices";
 import AppStoreBanner from "./AppStoreBanner";
+import ServiceWorkflow from "./ServiceWorkflow";
 
 import styles from "./NineColSection.module.css";
-import ServiceWorkflow from "./ServiceWorkflow";
 
 const { column, mainCard } = styles;
 
-// ─── Static data (move to props / API if needed) ──────────────────────────────
-
-const TABS = [
-  { id: "workflow" as TabId, label: "Service Workflow" },
-  { id: "details" as TabId, label: "Service Details" },
+const RELATED_SERVICE_ICONS = [
+  A.imgIconCertificate,
+  A.imgIconPencilSlash,
+  A.imgIconCheckSquare,
 ];
 
-const STEPS = [
-  {
-    label: "Step one",
-    description: "Agree to the declaration and click Save and Continue.",
-    color: "dark" as const,
-  },
-  {
-    label: "Step two",
-    description:
-      "Specify the duration you wish to cancel, then click on options and select Cancel Subscription Duration.",
-    color: "blue" as const,
-  },
-  {
-    label: "Step three",
-    description: "Select Contribution",
-    color: "purple" as const,
-  },
-  {
-    label: "Step four",
-    description: `Click on "Start Service" and log in.`,
-    color: "green" as const,
-  },
-];
+interface NineColSectionProps {
+  data?: ServiceWorkflowData | null;
+}
 
-const DOCUMENTS = [
-  { text: "خطاب رسمي برد الرصيد الدائن" },
-  { text: "كشف الحساب البنكي." },
-];
+export default function NineColSection({ data }: NineColSectionProps) {
+  const tabs = data?.tabs ?? [
+    { id: 1, order: 1, title: "Service Workflow", tabId: "workflow" as TabId },
+    { id: 2, order: 2, title: "Service Details",  tabId: "details"  as TabId },
+  ];
 
-const REQUIREMENTS = [
-  { text: "أن يكون المتقدم بالطلب يمتلك رصيد قابل للاسترداد." },
-  {
-    text: "ان يكون المشترك لديه حساب آيبان مسجل ونشيط لدى التأمينات الاجتماعية.",
-  },
-  { text: "اختيار التعطل عن العمل (ساند) والنقر على استئناف الصرف." },
-  {
-    text: "ان يكون المشترك لديه حساب آيبان مسجل ونشيط لدى التأمينات الاجتماعية.",
-  },
-];
+  const [activeTab, setActiveTab] = useState<TabId>(tabs[0]?.tabId ?? "workflow");
 
-const RELATED_SERVICES = [
-  {
-    iconSrc: A.imgIconCertificate,
-    title: "Issuance of Contirbution Duration Certificate",
-  },
-  {
-    iconSrc: A.imgIconPencilSlash,
-    title: "Modify Active Member Contirbution Duration",
-  },
-  { iconSrc: A.imgIconCheckSquare, title: "Verify Employment Status" },
-];
+  const steps = data?.steps ?? undefined;
+  const documents    = data?.documents?.map((text) => ({ text })) ?? [];
+  const requirements = data?.requirements?.map((text) => ({ text })) ?? [];
+  const relatedServices = data?.relatedServices?.map((rs, i) => ({
+    iconSrc: RELATED_SERVICE_ICONS[i % RELATED_SERVICE_ICONS.length],
+    title: rs.title,
+  })) ?? [];
 
-const STORE_BUTTONS = [
-  { src: A.imgGooglePlay, alt: "Google Play", flip: true },
-  { src: A.imgAppStore, alt: "App Store" },
-  { src: A.imgHuawei, alt: "Huawei AppGallery" },
-];
-
-// ─── Component ────────────────────────────────────────────────────────────────
-
-export default function NineColSection() {
-  const [activeTab, setActiveTab] = useState<TabId>("workflow");
+  const ad = data?.advertisement;
+  const storeButtons = ad?.storeIcons.map((s) => ({ src: s.iconUrl, alt: "Download" }))
+    ?? [{ src: A.imgGooglePlay, alt: "Google Play" }, { src: A.imgAppStore, alt: "App Store" }];
 
   return (
     <div className={column}>
-      {/* ── Card: Tabs + Service Steps + Service Explanation + Related Services ── */}
       <div className={mainCard}>
-        {/* Tab navigation */}
         <ServiceTabs
-          tabs={TABS}
+          tabs={tabs.map((t) => ({ id: t.tabId, label: t.title }))}
           activeTab={activeTab}
           onTabChange={setActiveTab}
         />
 
         {activeTab === "workflow" && (
           <>
-            {/* Service steps */}
-            <ServiceSteps />
+            <ServiceSteps steps={steps} />
 
-            {/* Service explanation, docs, requirements, CTAs */}
             <ServiceExplanation
               videoThumbnailSrc={A.imgRectangle34625447}
               playButtonSrc={A.imgPlayButton}
               docsIconSrc={A.imgIconPaperclip}
-              documents={DOCUMENTS}
+              documents={documents}
               requirementsIconSrc={A.imgIconPath}
-              requirements={REQUIREMENTS}
+              requirements={requirements}
               downloadBadgeSrc={A.imgIconDownloadBadge}
               downloadArrowSrc={A.imgIconDownloadArrow}
               faqIconSrc={A.imgIconQuestion}
               faqLinkIconSrc={A.imgIconExternalLink}
             />
 
-            {/* Related services */}
-            <RelatedServices services={RELATED_SERVICES} />
+            <RelatedServices services={relatedServices} />
           </>
         )}
 
         {activeTab === "details" && (
-          <div className="py-8 text-white text-center w-full">
-            <ServiceWorkflow/>
-          </div>
+          <ServiceWorkflow serviceImages={data?.serviceImages} />
         )}
       </div>
 
-      {/* ── App store banner (outside card) ── */}
       <AppStoreBanner
-        stores={STORE_BUTTONS}
+        heading={ad?.label}
+        subheading={ad?.description}
+        stores={storeButtons}
         phoneFrameSrc={A.imgPhoneFrame}
-        phoneImageSrc={A.imgHandAndIPhone16Pro}
+        phoneImageSrc={ad?.imageUrl || A.imgHandAndIPhone16Pro}
       />
     </div>
   );

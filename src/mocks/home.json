@@ -1,0 +1,930 @@
+{
+    "data": [
+        {
+            "id": 14,
+            "documentId": "oheuwmc5i4mmond9d6f4cldk",
+            "createdAt": "2026-05-21T06:54:24.068Z",
+            "updatedAt": "2026-05-23T15:58:18.841Z",
+            "publishedAt": "2026-05-23T15:58:19.038Z",
+            "locale": "ar",
+            "title": "Issue Wage e-certificate",
+            "service_description": [
+                {
+                    "type": "paragraph",
+                    "children": [
+                        {
+                            "text": "GOSI offers an online service that allows beneficiaries to issue a detailed e-certificate showing the contribution periods and wages of the Saudi and non-Saudi contributors quickly without visiting the branch. ​",
+                            "type": "text"
+                        }
+                    ]
+                }
+            ],
+            "service_card_details": [
+                {
+                    "id": 26,
+                    "title": "Beneficiary category of the service",
+                    "card_description": "Contributor",
+                    "bg_color": "#0064FF",
+                    "title_color": null,
+                    "description_color": null,
+                    "icon": [
+                        {
+                            "id": 134,
+                            "documentId": "wqmmfhfbjpeo3z165zgj555k",
+                            "name": "Star.png",
+                            "alternativeText": null,
+                            "caption": null,
+                            "focalPoint": null,
+                            "width": 32,
+                            "height": 32,
+                            "formats": null,
+                            "hash": "Star_77b3f65d8d",
+                            "ext": ".png",
+                            "mime": "image/png",
+                            "size": 0.42,
+                            "url": "/uploads/Star_77b3f65d8d.png",
+                            "previewUrl": null,
+                            "provider": "local",
+                            "provider_metadata": null,
+                            "createdAt": "2026-05-21T10:08:25.808Z",
+                            "updatedAt": "2026-05-21T10:08:25.808Z",
+                            "publishedAt": "2026-05-21T10:08:25.809Z"
+                        }
+                    ]
+                },
+                {
+                    "id": 27,
+                    "title": "Service launch date",
+                    "card_description": "09/01/2024",
+                    "bg_color": "#3341574D",
+                    "title_color": null,
+                    "description_color": null,
+                    "icon": [
+                        {
+                            "id": 135,
+                            "documentId": "eb9h10i2ppr8g8ijtbrppix0",
+                            "name": "UserCircle.png",
+                            "alternativeText": null,
+                            "caption": null,
+                            "focalPoint": null,
+                            "width": 32,
+                            "height": 32,
+                            "formats": null,
+                            "hash": "User_Circle_a390bb7701",
+                            "ext": ".png",
+                            "mime": "image/png",
+                            "size": 0.44,
+                            "url": "/uploads/User_Circle_a390bb7701.png",
+                            "previewUrl": null,
+                            "provider": "local",
+                            "provider_metadata": null,
+                            "createdAt": "2026-05-21T10:13:10.612Z",
+                            "updatedAt": "2026-05-21T10:13:10.612Z",
+                            "publishedAt": "2026-05-21T10:13:10.613Z"
+                        }
+                    ]
+                }
+            ],
+            "service_Image": [
+                {
+                    "id": 15,
+                    "label": "Workflow (Contributor )",
+                    "imageFit": "fill",
+                    "lightDesktopImage": {
+                        "id": 136,
+                        "documentId": "krsbaej1nxmpspx1ffeuamof",
+                        "name": "Frame 1984080166 (1).png",
+                        "alternativeText": null,
+                        "caption": null,
+                        "focalPoint": null,
+                        "width": 842,
+                        "height": 605,
+                        "formats": {
+                            "small": {
+                                "ext": ".png",
+                                "url": "/uploads/small_Frame_1984080166_1_49ecfbf41c.png",
+                                "hash": "small_Frame_1984080166_1_49ecfbf41c",
+                                "mime": "image/png",
+                                "name": "small_Frame 1984080166 (1).png",
+                                "path": null,
+                                "size": 35.07,
+                                "width": 500,
+                                "height": 359,
+                                "sizeInBytes": 35066
+                            },
+                            "medium": {
+                                "ext": ".png",
+                                "url": "/uploads/medium_Frame_1984080166_1_49ecfbf41c.png",
+                                "hash": "medium_Frame_1984080166_1_49ecfbf41c",
+                                "mime": "image/png",
+                                "name": "medium_Frame 1984080166 (1).png",
+                                "path": null,
+                                "size": 59.64,
+                                "width": 750,
+                                "height": 539,
+                                "sizeInBytes": 59635
+                            },
+                            "thumbnail": {
+                                "ext": ".png",
+                                "url": "/uploads/thumbnail_Frame_1984080166_1_49ecfbf41c.png",
+                                "hash": "thumbnail_Frame_1984080166_1_49ecfbf41c",
+                                "mime": "image/png",
+                                "name": "thumbnail_Frame 1984080166 (1).png",
+                                "path": null,
+                                "size": 12.85,
+                                "width": 217,
+                                "height": 156,
+                                "sizeInBytes": 12848
+                            }
+                        },
+                        "hash": "Frame_1984080166_1_49ecfbf41c",
+                        "ext": ".png",
+                        "mime": "image/png",
+                        "size": 10.99,
+                        "url": "/uploads/Frame_1984080166_1_49ecfbf41c.png",
+                        "previewUrl": null,
+                        "provider": "local",
+                        "provider_metadata": null,
+                        "createdAt": "2026-05-22T07:26:09.389Z",
+                        "updatedAt": "2026-05-22T07:26:09.389Z",
+                        "publishedAt": "2026-05-22T07:26:09.389Z"
+                    },
+                    "lightMobileImage": {
+                        "id": 136,
+                        "documentId": "krsbaej1nxmpspx1ffeuamof",
+                        "name": "Frame 1984080166 (1).png",
+                        "alternativeText": null,
+                        "caption": null,
+                        "focalPoint": null,
+                        "width": 842,
+                        "height": 605,
+                        "formats": {
+                            "small": {
+                                "ext": ".png",
+                                "url": "/uploads/small_Frame_1984080166_1_49ecfbf41c.png",
+                                "hash": "small_Frame_1984080166_1_49ecfbf41c",
+                                "mime": "image/png",
+                                "name": "small_Frame 1984080166 (1).png",
+                                "path": null,
+                                "size": 35.07,
+                                "width": 500,
+                                "height": 359,
+                                "sizeInBytes": 35066
+                            },
+                            "medium": {
+                                "ext": ".png",
+                                "url": "/uploads/medium_Frame_1984080166_1_49ecfbf41c.png",
+                                "hash": "medium_Frame_1984080166_1_49ecfbf41c",
+                                "mime": "image/png",
+                                "name": "medium_Frame 1984080166 (1).png",
+                                "path": null,
+                                "size": 59.64,
+                                "width": 750,
+                                "height": 539,
+                                "sizeInBytes": 59635
+                            },
+                            "thumbnail": {
+                                "ext": ".png",
+                                "url": "/uploads/thumbnail_Frame_1984080166_1_49ecfbf41c.png",
+                                "hash": "thumbnail_Frame_1984080166_1_49ecfbf41c",
+                                "mime": "image/png",
+                                "name": "thumbnail_Frame 1984080166 (1).png",
+                                "path": null,
+                                "size": 12.85,
+                                "width": 217,
+                                "height": 156,
+                                "sizeInBytes": 12848
+                            }
+                        },
+                        "hash": "Frame_1984080166_1_49ecfbf41c",
+                        "ext": ".png",
+                        "mime": "image/png",
+                        "size": 10.99,
+                        "url": "/uploads/Frame_1984080166_1_49ecfbf41c.png",
+                        "previewUrl": null,
+                        "provider": "local",
+                        "provider_metadata": null,
+                        "createdAt": "2026-05-22T07:26:09.389Z",
+                        "updatedAt": "2026-05-22T07:26:09.389Z",
+                        "publishedAt": "2026-05-22T07:26:09.389Z"
+                    },
+                    "darkDesktopImage": {
+                        "id": 136,
+                        "documentId": "krsbaej1nxmpspx1ffeuamof",
+                        "name": "Frame 1984080166 (1).png",
+                        "alternativeText": null,
+                        "caption": null,
+                        "focalPoint": null,
+                        "width": 842,
+                        "height": 605,
+                        "formats": {
+                            "small": {
+                                "ext": ".png",
+                                "url": "/uploads/small_Frame_1984080166_1_49ecfbf41c.png",
+                                "hash": "small_Frame_1984080166_1_49ecfbf41c",
+                                "mime": "image/png",
+                                "name": "small_Frame 1984080166 (1).png",
+                                "path": null,
+                                "size": 35.07,
+                                "width": 500,
+                                "height": 359,
+                                "sizeInBytes": 35066
+                            },
+                            "medium": {
+                                "ext": ".png",
+                                "url": "/uploads/medium_Frame_1984080166_1_49ecfbf41c.png",
+                                "hash": "medium_Frame_1984080166_1_49ecfbf41c",
+                                "mime": "image/png",
+                                "name": "medium_Frame 1984080166 (1).png",
+                                "path": null,
+                                "size": 59.64,
+                                "width": 750,
+                                "height": 539,
+                                "sizeInBytes": 59635
+                            },
+                            "thumbnail": {
+                                "ext": ".png",
+                                "url": "/uploads/thumbnail_Frame_1984080166_1_49ecfbf41c.png",
+                                "hash": "thumbnail_Frame_1984080166_1_49ecfbf41c",
+                                "mime": "image/png",
+                                "name": "thumbnail_Frame 1984080166 (1).png",
+                                "path": null,
+                                "size": 12.85,
+                                "width": 217,
+                                "height": 156,
+                                "sizeInBytes": 12848
+                            }
+                        },
+                        "hash": "Frame_1984080166_1_49ecfbf41c",
+                        "ext": ".png",
+                        "mime": "image/png",
+                        "size": 10.99,
+                        "url": "/uploads/Frame_1984080166_1_49ecfbf41c.png",
+                        "previewUrl": null,
+                        "provider": "local",
+                        "provider_metadata": null,
+                        "createdAt": "2026-05-22T07:26:09.389Z",
+                        "updatedAt": "2026-05-22T07:26:09.389Z",
+                        "publishedAt": "2026-05-22T07:26:09.389Z"
+                    },
+                    "darkMobileImage": {
+                        "id": 136,
+                        "documentId": "krsbaej1nxmpspx1ffeuamof",
+                        "name": "Frame 1984080166 (1).png",
+                        "alternativeText": null,
+                        "caption": null,
+                        "focalPoint": null,
+                        "width": 842,
+                        "height": 605,
+                        "formats": {
+                            "small": {
+                                "ext": ".png",
+                                "url": "/uploads/small_Frame_1984080166_1_49ecfbf41c.png",
+                                "hash": "small_Frame_1984080166_1_49ecfbf41c",
+                                "mime": "image/png",
+                                "name": "small_Frame 1984080166 (1).png",
+                                "path": null,
+                                "size": 35.07,
+                                "width": 500,
+                                "height": 359,
+                                "sizeInBytes": 35066
+                            },
+                            "medium": {
+                                "ext": ".png",
+                                "url": "/uploads/medium_Frame_1984080166_1_49ecfbf41c.png",
+                                "hash": "medium_Frame_1984080166_1_49ecfbf41c",
+                                "mime": "image/png",
+                                "name": "medium_Frame 1984080166 (1).png",
+                                "path": null,
+                                "size": 59.64,
+                                "width": 750,
+                                "height": 539,
+                                "sizeInBytes": 59635
+                            },
+                            "thumbnail": {
+                                "ext": ".png",
+                                "url": "/uploads/thumbnail_Frame_1984080166_1_49ecfbf41c.png",
+                                "hash": "thumbnail_Frame_1984080166_1_49ecfbf41c",
+                                "mime": "image/png",
+                                "name": "thumbnail_Frame 1984080166 (1).png",
+                                "path": null,
+                                "size": 12.85,
+                                "width": 217,
+                                "height": 156,
+                                "sizeInBytes": 12848
+                            }
+                        },
+                        "hash": "Frame_1984080166_1_49ecfbf41c",
+                        "ext": ".png",
+                        "mime": "image/png",
+                        "size": 10.99,
+                        "url": "/uploads/Frame_1984080166_1_49ecfbf41c.png",
+                        "previewUrl": null,
+                        "provider": "local",
+                        "provider_metadata": null,
+                        "createdAt": "2026-05-22T07:26:09.389Z",
+                        "updatedAt": "2026-05-22T07:26:09.389Z",
+                        "publishedAt": "2026-05-22T07:26:09.389Z"
+                    }
+                },
+                {
+                    "id": 16,
+                    "label": "Workflow (Employer)",
+                    "imageFit": "cover",
+                    "lightDesktopImage": {
+                        "id": 137,
+                        "documentId": "e490xvrf9izt4m6dk7kvi9iw",
+                        "name": "Frame 2147207574.png",
+                        "alternativeText": null,
+                        "caption": null,
+                        "focalPoint": null,
+                        "width": 842,
+                        "height": 605,
+                        "formats": {
+                            "small": {
+                                "ext": ".png",
+                                "url": "/uploads/small_Frame_2147207574_b5b10b3de1.png",
+                                "hash": "small_Frame_2147207574_b5b10b3de1",
+                                "mime": "image/png",
+                                "name": "small_Frame 2147207574.png",
+                                "path": null,
+                                "size": 35.07,
+                                "width": 500,
+                                "height": 359,
+                                "sizeInBytes": 35066
+                            },
+                            "medium": {
+                                "ext": ".png",
+                                "url": "/uploads/medium_Frame_2147207574_b5b10b3de1.png",
+                                "hash": "medium_Frame_2147207574_b5b10b3de1",
+                                "mime": "image/png",
+                                "name": "medium_Frame 2147207574.png",
+                                "path": null,
+                                "size": 59.64,
+                                "width": 750,
+                                "height": 539,
+                                "sizeInBytes": 59635
+                            },
+                            "thumbnail": {
+                                "ext": ".png",
+                                "url": "/uploads/thumbnail_Frame_2147207574_b5b10b3de1.png",
+                                "hash": "thumbnail_Frame_2147207574_b5b10b3de1",
+                                "mime": "image/png",
+                                "name": "thumbnail_Frame 2147207574.png",
+                                "path": null,
+                                "size": 12.85,
+                                "width": 217,
+                                "height": 156,
+                                "sizeInBytes": 12848
+                            }
+                        },
+                        "hash": "Frame_2147207574_b5b10b3de1",
+                        "ext": ".png",
+                        "mime": "image/png",
+                        "size": 10.99,
+                        "url": "/uploads/Frame_2147207574_b5b10b3de1.png",
+                        "previewUrl": null,
+                        "provider": "local",
+                        "provider_metadata": null,
+                        "createdAt": "2026-05-22T07:28:29.731Z",
+                        "updatedAt": "2026-05-22T07:28:29.731Z",
+                        "publishedAt": "2026-05-22T07:28:29.731Z"
+                    },
+                    "lightMobileImage": {
+                        "id": 137,
+                        "documentId": "e490xvrf9izt4m6dk7kvi9iw",
+                        "name": "Frame 2147207574.png",
+                        "alternativeText": null,
+                        "caption": null,
+                        "focalPoint": null,
+                        "width": 842,
+                        "height": 605,
+                        "formats": {
+                            "small": {
+                                "ext": ".png",
+                                "url": "/uploads/small_Frame_2147207574_b5b10b3de1.png",
+                                "hash": "small_Frame_2147207574_b5b10b3de1",
+                                "mime": "image/png",
+                                "name": "small_Frame 2147207574.png",
+                                "path": null,
+                                "size": 35.07,
+                                "width": 500,
+                                "height": 359,
+                                "sizeInBytes": 35066
+                            },
+                            "medium": {
+                                "ext": ".png",
+                                "url": "/uploads/medium_Frame_2147207574_b5b10b3de1.png",
+                                "hash": "medium_Frame_2147207574_b5b10b3de1",
+                                "mime": "image/png",
+                                "name": "medium_Frame 2147207574.png",
+                                "path": null,
+                                "size": 59.64,
+                                "width": 750,
+                                "height": 539,
+                                "sizeInBytes": 59635
+                            },
+                            "thumbnail": {
+                                "ext": ".png",
+                                "url": "/uploads/thumbnail_Frame_2147207574_b5b10b3de1.png",
+                                "hash": "thumbnail_Frame_2147207574_b5b10b3de1",
+                                "mime": "image/png",
+                                "name": "thumbnail_Frame 2147207574.png",
+                                "path": null,
+                                "size": 12.85,
+                                "width": 217,
+                                "height": 156,
+                                "sizeInBytes": 12848
+                            }
+                        },
+                        "hash": "Frame_2147207574_b5b10b3de1",
+                        "ext": ".png",
+                        "mime": "image/png",
+                        "size": 10.99,
+                        "url": "/uploads/Frame_2147207574_b5b10b3de1.png",
+                        "previewUrl": null,
+                        "provider": "local",
+                        "provider_metadata": null,
+                        "createdAt": "2026-05-22T07:28:29.731Z",
+                        "updatedAt": "2026-05-22T07:28:29.731Z",
+                        "publishedAt": "2026-05-22T07:28:29.731Z"
+                    },
+                    "darkDesktopImage": {
+                        "id": 137,
+                        "documentId": "e490xvrf9izt4m6dk7kvi9iw",
+                        "name": "Frame 2147207574.png",
+                        "alternativeText": null,
+                        "caption": null,
+                        "focalPoint": null,
+                        "width": 842,
+                        "height": 605,
+                        "formats": {
+                            "small": {
+                                "ext": ".png",
+                                "url": "/uploads/small_Frame_2147207574_b5b10b3de1.png",
+                                "hash": "small_Frame_2147207574_b5b10b3de1",
+                                "mime": "image/png",
+                                "name": "small_Frame 2147207574.png",
+                                "path": null,
+                                "size": 35.07,
+                                "width": 500,
+                                "height": 359,
+                                "sizeInBytes": 35066
+                            },
+                            "medium": {
+                                "ext": ".png",
+                                "url": "/uploads/medium_Frame_2147207574_b5b10b3de1.png",
+                                "hash": "medium_Frame_2147207574_b5b10b3de1",
+                                "mime": "image/png",
+                                "name": "medium_Frame 2147207574.png",
+                                "path": null,
+                                "size": 59.64,
+                                "width": 750,
+                                "height": 539,
+                                "sizeInBytes": 59635
+                            },
+                            "thumbnail": {
+                                "ext": ".png",
+                                "url": "/uploads/thumbnail_Frame_2147207574_b5b10b3de1.png",
+                                "hash": "thumbnail_Frame_2147207574_b5b10b3de1",
+                                "mime": "image/png",
+                                "name": "thumbnail_Frame 2147207574.png",
+                                "path": null,
+                                "size": 12.85,
+                                "width": 217,
+                                "height": 156,
+                                "sizeInBytes": 12848
+                            }
+                        },
+                        "hash": "Frame_2147207574_b5b10b3de1",
+                        "ext": ".png",
+                        "mime": "image/png",
+                        "size": 10.99,
+                        "url": "/uploads/Frame_2147207574_b5b10b3de1.png",
+                        "previewUrl": null,
+                        "provider": "local",
+                        "provider_metadata": null,
+                        "createdAt": "2026-05-22T07:28:29.731Z",
+                        "updatedAt": "2026-05-22T07:28:29.731Z",
+                        "publishedAt": "2026-05-22T07:28:29.731Z"
+                    },
+                    "darkMobileImage": {
+                        "id": 137,
+                        "documentId": "e490xvrf9izt4m6dk7kvi9iw",
+                        "name": "Frame 2147207574.png",
+                        "alternativeText": null,
+                        "caption": null,
+                        "focalPoint": null,
+                        "width": 842,
+                        "height": 605,
+                        "formats": {
+                            "small": {
+                                "ext": ".png",
+                                "url": "/uploads/small_Frame_2147207574_b5b10b3de1.png",
+                                "hash": "small_Frame_2147207574_b5b10b3de1",
+                                "mime": "image/png",
+                                "name": "small_Frame 2147207574.png",
+                                "path": null,
+                                "size": 35.07,
+                                "width": 500,
+                                "height": 359,
+                                "sizeInBytes": 35066
+                            },
+                            "medium": {
+                                "ext": ".png",
+                                "url": "/uploads/medium_Frame_2147207574_b5b10b3de1.png",
+                                "hash": "medium_Frame_2147207574_b5b10b3de1",
+                                "mime": "image/png",
+                                "name": "medium_Frame 2147207574.png",
+                                "path": null,
+                                "size": 59.64,
+                                "width": 750,
+                                "height": 539,
+                                "sizeInBytes": 59635
+                            },
+                            "thumbnail": {
+                                "ext": ".png",
+                                "url": "/uploads/thumbnail_Frame_2147207574_b5b10b3de1.png",
+                                "hash": "thumbnail_Frame_2147207574_b5b10b3de1",
+                                "mime": "image/png",
+                                "name": "thumbnail_Frame 2147207574.png",
+                                "path": null,
+                                "size": 12.85,
+                                "width": 217,
+                                "height": 156,
+                                "sizeInBytes": 12848
+                            }
+                        },
+                        "hash": "Frame_2147207574_b5b10b3de1",
+                        "ext": ".png",
+                        "mime": "image/png",
+                        "size": 10.99,
+                        "url": "/uploads/Frame_2147207574_b5b10b3de1.png",
+                        "previewUrl": null,
+                        "provider": "local",
+                        "provider_metadata": null,
+                        "createdAt": "2026-05-22T07:28:29.731Z",
+                        "updatedAt": "2026-05-22T07:28:29.731Z",
+                        "publishedAt": "2026-05-22T07:28:29.731Z"
+                    }
+                }
+            ],
+            "tab": [
+                {
+                    "order": 1,
+                    "id": 152,
+                    "title": "Service Workflow",
+                    "content": null,
+                    "isOpen": true,
+                    "isActive": true,
+                    "icon": null,
+                    "link": {
+                        "id": 53,
+                        "label": "url",
+                        "url": "/home",
+                        "target": null,
+                        "isOpen_in_new_window": null
+                    }
+                },
+                                {
+                    "order": 2,
+                    "id": 153,
+                    "title": "Service Details",
+                    "content": null,
+                    "isOpen": true,
+                    "isActive": true,
+                    "icon": null,
+                    "link": {
+                        "id": 53,
+                        "label": "url",
+                        "url": "/home",
+                        "target": null,
+                        "isOpen_in_new_window": null
+                    }
+                }
+            ],
+            "ratting": {
+                "id": 5,
+                "title": "Service Level Evaluation",
+                "description": "Rating: 392 (number of votes)",
+                "bg_color": null,
+                "Ratting": 4.8,
+                "icon": {
+                    "id": 134,
+                    "documentId": "wqmmfhfbjpeo3z165zgj555k",
+                    "name": "Star.png",
+                    "alternativeText": null,
+                    "caption": null,
+                    "focalPoint": null,
+                    "width": 32,
+                    "height": 32,
+                    "formats": null,
+                    "hash": "Star_77b3f65d8d",
+                    "ext": ".png",
+                    "mime": "image/png",
+                    "size": 0.42,
+                    "url": "/uploads/Star_77b3f65d8d.png",
+                    "previewUrl": null,
+                    "provider": "local",
+                    "provider_metadata": null,
+                    "createdAt": "2026-05-21T10:08:25.808Z",
+                    "updatedAt": "2026-05-21T10:08:25.808Z",
+                    "publishedAt": "2026-05-21T10:08:25.809Z"
+                },
+                "rattingIcon": [
+                    {
+                        "id": 140,
+                        "documentId": "c4ojygk9hg9nimxy4jouw5yp",
+                        "name": "Group 1984080170.png",
+                        "alternativeText": null,
+                        "caption": null,
+                        "focalPoint": null,
+                        "width": 242,
+                        "height": 37,
+                        "formats": null,
+                        "hash": "Group_1984080170_6f977af1a8",
+                        "ext": ".png",
+                        "mime": "image/png",
+                        "size": 1.02,
+                        "url": "/uploads/Group_1984080170_6f977af1a8.png",
+                        "previewUrl": null,
+                        "provider": "local",
+                        "provider_metadata": null,
+                        "createdAt": "2026-05-23T15:58:12.479Z",
+                        "updatedAt": "2026-05-23T15:58:12.479Z",
+                        "publishedAt": "2026-05-23T15:58:12.480Z"
+                    }
+                ]
+            },
+            "faq": {
+                "id": 3,
+                "title": "Service customisation and preferences",
+                "description": "Frequently asked questions about service customisation and preferences",
+                "bg_color": null,
+                "target_link": null,
+                "icon": {
+                    "id": 135,
+                    "documentId": "eb9h10i2ppr8g8ijtbrppix0",
+                    "name": "UserCircle.png",
+                    "alternativeText": null,
+                    "caption": null,
+                    "focalPoint": null,
+                    "width": 32,
+                    "height": 32,
+                    "formats": null,
+                    "hash": "User_Circle_a390bb7701",
+                    "ext": ".png",
+                    "mime": "image/png",
+                    "size": 0.44,
+                    "url": "/uploads/User_Circle_a390bb7701.png",
+                    "previewUrl": null,
+                    "provider": "local",
+                    "provider_metadata": null,
+                    "createdAt": "2026-05-21T10:13:10.612Z",
+                    "updatedAt": "2026-05-21T10:13:10.612Z",
+                    "publishedAt": "2026-05-21T10:13:10.613Z"
+                }
+            },
+            "share": {
+                "id": 3,
+                "title": "Service delivery channels",
+                "description": "- Electronic portal\n- Virtual visit",
+                "bg_color": null,
+                "icon": {
+                    "id": 135,
+                    "documentId": "eb9h10i2ppr8g8ijtbrppix0",
+                    "name": "UserCircle.png",
+                    "alternativeText": null,
+                    "caption": null,
+                    "focalPoint": null,
+                    "width": 32,
+                    "height": 32,
+                    "formats": null,
+                    "hash": "User_Circle_a390bb7701",
+                    "ext": ".png",
+                    "mime": "image/png",
+                    "size": 0.44,
+                    "url": "/uploads/User_Circle_a390bb7701.png",
+                    "previewUrl": null,
+                    "provider": "local",
+                    "provider_metadata": null,
+                    "createdAt": "2026-05-21T10:13:10.612Z",
+                    "updatedAt": "2026-05-21T10:13:10.612Z",
+                    "publishedAt": "2026-05-21T10:13:10.613Z"
+                }
+            },
+            "contect": {
+                "id": 3,
+                "contactHeading": "Customer service",
+                "workingHours": "Saturday - Thursday: from 8 AM to 8 PM",
+                "icon": null,
+                "phoneCard": null,
+                "contactUsLink": {
+                    "id": 54,
+                    "label": null,
+                    "url": null,
+                    "target": null,
+                    "isOpen_in_new_window": null
+                },
+                "phoneNumbers": [
+                    {
+                        "id": 5,
+                        "label": "Within the Kingdom",
+                        "number": "8001243344 ",
+                        "iconBackground": null
+                    },
+                    {
+                        "id": 6,
+                        "label": " Outside the Kingdom",
+                        "number": " 920014000",
+                        "iconBackground": null
+                    }
+                ]
+            },
+            "Advertisement": [
+                {
+                    "id": 7,
+                    "label": "Related applications",
+                    "description": "Enjoy all the services you need on the app now",
+                    "bg_color": "#A37DFC",
+                    "lightDesktopImage": {
+                        "id": 138,
+                        "documentId": "z3pyjmw91fxi89k6j4m5obua",
+                        "name": "Hand and iPhone 16 Pro.png",
+                        "alternativeText": null,
+                        "caption": null,
+                        "focalPoint": null,
+                        "width": 481,
+                        "height": 259,
+                        "formats": {
+                            "thumbnail": {
+                                "ext": ".png",
+                                "url": "/uploads/thumbnail_Hand_and_i_Phone_16_Pro_dd48aef881.png",
+                                "hash": "thumbnail_Hand_and_i_Phone_16_Pro_dd48aef881",
+                                "mime": "image/png",
+                                "name": "thumbnail_Hand and iPhone 16 Pro.png",
+                                "path": null,
+                                "size": 38.29,
+                                "width": 245,
+                                "height": 132,
+                                "sizeInBytes": 38291
+                            }
+                        },
+                        "hash": "Hand_and_i_Phone_16_Pro_dd48aef881",
+                        "ext": ".png",
+                        "mime": "image/png",
+                        "size": 33.4,
+                        "url": "/uploads/Hand_and_i_Phone_16_Pro_dd48aef881.png",
+                        "previewUrl": null,
+                        "provider": "local",
+                        "provider_metadata": null,
+                        "createdAt": "2026-05-22T10:38:01.334Z",
+                        "updatedAt": "2026-05-22T10:38:01.334Z",
+                        "publishedAt": "2026-05-22T10:38:01.335Z"
+                    },
+                    "lightMobileImage": {
+                        "id": 138,
+                        "documentId": "z3pyjmw91fxi89k6j4m5obua",
+                        "name": "Hand and iPhone 16 Pro.png",
+                        "alternativeText": null,
+                        "caption": null,
+                        "focalPoint": null,
+                        "width": 481,
+                        "height": 259,
+                        "formats": {
+                            "thumbnail": {
+                                "ext": ".png",
+                                "url": "/uploads/thumbnail_Hand_and_i_Phone_16_Pro_dd48aef881.png",
+                                "hash": "thumbnail_Hand_and_i_Phone_16_Pro_dd48aef881",
+                                "mime": "image/png",
+                                "name": "thumbnail_Hand and iPhone 16 Pro.png",
+                                "path": null,
+                                "size": 38.29,
+                                "width": 245,
+                                "height": 132,
+                                "sizeInBytes": 38291
+                            }
+                        },
+                        "hash": "Hand_and_i_Phone_16_Pro_dd48aef881",
+                        "ext": ".png",
+                        "mime": "image/png",
+                        "size": 33.4,
+                        "url": "/uploads/Hand_and_i_Phone_16_Pro_dd48aef881.png",
+                        "previewUrl": null,
+                        "provider": "local",
+                        "provider_metadata": null,
+                        "createdAt": "2026-05-22T10:38:01.334Z",
+                        "updatedAt": "2026-05-22T10:38:01.334Z",
+                        "publishedAt": "2026-05-22T10:38:01.335Z"
+                    },
+                    "darkDesktopImage": {
+                        "id": 138,
+                        "documentId": "z3pyjmw91fxi89k6j4m5obua",
+                        "name": "Hand and iPhone 16 Pro.png",
+                        "alternativeText": null,
+                        "caption": null,
+                        "focalPoint": null,
+                        "width": 481,
+                        "height": 259,
+                        "formats": {
+                            "thumbnail": {
+                                "ext": ".png",
+                                "url": "/uploads/thumbnail_Hand_and_i_Phone_16_Pro_dd48aef881.png",
+                                "hash": "thumbnail_Hand_and_i_Phone_16_Pro_dd48aef881",
+                                "mime": "image/png",
+                                "name": "thumbnail_Hand and iPhone 16 Pro.png",
+                                "path": null,
+                                "size": 38.29,
+                                "width": 245,
+                                "height": 132,
+                                "sizeInBytes": 38291
+                            }
+                        },
+                        "hash": "Hand_and_i_Phone_16_Pro_dd48aef881",
+                        "ext": ".png",
+                        "mime": "image/png",
+                        "size": 33.4,
+                        "url": "/uploads/Hand_and_i_Phone_16_Pro_dd48aef881.png",
+                        "previewUrl": null,
+                        "provider": "local",
+                        "provider_metadata": null,
+                        "createdAt": "2026-05-22T10:38:01.334Z",
+                        "updatedAt": "2026-05-22T10:38:01.334Z",
+                        "publishedAt": "2026-05-22T10:38:01.335Z"
+                    },
+                    "darkMobileImage": {
+                        "id": 138,
+                        "documentId": "z3pyjmw91fxi89k6j4m5obua",
+                        "name": "Hand and iPhone 16 Pro.png",
+                        "alternativeText": null,
+                        "caption": null,
+                        "focalPoint": null,
+                        "width": 481,
+                        "height": 259,
+                        "formats": {
+                            "thumbnail": {
+                                "ext": ".png",
+                                "url": "/uploads/thumbnail_Hand_and_i_Phone_16_Pro_dd48aef881.png",
+                                "hash": "thumbnail_Hand_and_i_Phone_16_Pro_dd48aef881",
+                                "mime": "image/png",
+                                "name": "thumbnail_Hand and iPhone 16 Pro.png",
+                                "path": null,
+                                "size": 38.29,
+                                "width": 245,
+                                "height": 132,
+                                "sizeInBytes": 38291
+                            }
+                        },
+                        "hash": "Hand_and_i_Phone_16_Pro_dd48aef881",
+                        "ext": ".png",
+                        "mime": "image/png",
+                        "size": 33.4,
+                        "url": "/uploads/Hand_and_i_Phone_16_Pro_dd48aef881.png",
+                        "previewUrl": null,
+                        "provider": "local",
+                        "provider_metadata": null,
+                        "createdAt": "2026-05-22T10:38:01.334Z",
+                        "updatedAt": "2026-05-22T10:38:01.334Z",
+                        "publishedAt": "2026-05-22T10:38:01.335Z"
+                    },
+                    "promotionalBanner": [
+                        {
+                            "id": 7,
+                            "target": null,
+                            "icon": {
+                                "id": 139,
+                                "documentId": "wkqdhdcpg11axs0wbh9dw70r",
+                                "name": "GooglePlay.png",
+                                "alternativeText": null,
+                                "caption": null,
+                                "focalPoint": null,
+                                "width": 113,
+                                "height": 34,
+                                "formats": null,
+                                "hash": "Google_Play_7175ab53ac",
+                                "ext": ".png",
+                                "mime": "image/png",
+                                "size": 1.1,
+                                "url": "/uploads/Google_Play_7175ab53ac.png",
+                                "previewUrl": null,
+                                "provider": "local",
+                                "provider_metadata": null,
+                                "createdAt": "2026-05-22T10:39:32.080Z",
+                                "updatedAt": "2026-05-22T10:39:32.080Z",
+                                "publishedAt": "2026-05-22T10:39:32.081Z"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "meta": {
+        "pagination": {
+            "page": 1,
+            "pageSize": 25,
+            "pageCount": 1,
+            "total": 1
+        }
+    }
+}

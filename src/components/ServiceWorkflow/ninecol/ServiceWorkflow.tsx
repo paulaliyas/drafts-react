@@ -1,14 +1,8 @@
+import type { ServiceImageItem } from "../types";
 import styles from "./ServiceWorkflow.module.css";
 
 const {
   wrapper,
-  tabSection,
-  tabBar,
-  tabList,
-  tabActive,
-  tabActiveLabel,
-  tabInactive,
-  tabInactiveLabel,
   bannerGreen,
   bannerPurple,
   bannerLabel,
@@ -16,46 +10,35 @@ const {
   flowchartImage,
 } = styles;
 
-const CONTRIBUTOR_WORKFLOW_IMG = "/assets/workflow-contributor.png";
-const EMPLOYER_WORKFLOW_IMG = "/assets/workflow-employer.png";
+const BANNER_CLASSES = [bannerGreen, bannerPurple];
 
-export default function ServiceWorkflow() {
+interface ServiceWorkflowProps {
+  serviceImages?: ServiceImageItem[];
+}
+
+export default function ServiceWorkflow({ serviceImages }: ServiceWorkflowProps) {
+  if (!serviceImages?.length) return null;
+
   return (
     <div className={wrapper}>
-      {/* ── Tabs ── */}
-      <div className={tabSection}>
-        {/* Contributor banner */}
-        <div className={bannerGreen}>
-          <p className={bannerLabel} dir="auto">
-            Workflow (Contributor )
-          </p>
+      {serviceImages.map((img, i) => (
+        <div key={img.id}>
+          <div className={BANNER_CLASSES[i % BANNER_CLASSES.length]}>
+            <p className={bannerLabel} dir="auto">
+              {img.label}
+            </p>
+          </div>
+
+          <div className={flowchartContainer}>
+            <img
+              src={img.lightDesktopImageUrl}
+              alt={img.label}
+              className={flowchartImage}
+              style={{ objectFit: img.imageFit === "fill" ? "fill" : "cover" }}
+            />
+          </div>
         </div>
-      </div>
-
-      {/* ── Contributor flowchart ── */}
-      <div className={flowchartContainer}>
-        <img
-          src={CONTRIBUTOR_WORKFLOW_IMG}
-          alt="Contributor service workflow diagram"
-          className={flowchartImage}
-        />
-      </div>
-
-      {/* ── Employer banner ── */}
-      <div className={bannerPurple}>
-        <p className={bannerLabel} dir="auto">
-          Workflow (Employer)
-        </p>
-      </div>
-
-      {/* ── Employer flowchart ── */}
-      <div className={flowchartContainer}>
-        <img
-          src={EMPLOYER_WORKFLOW_IMG}
-          alt="Employer service workflow diagram"
-          className={flowchartImage}
-        />
-      </div>
+      ))}
     </div>
   );
 }

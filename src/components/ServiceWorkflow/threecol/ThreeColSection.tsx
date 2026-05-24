@@ -1,3 +1,4 @@
+import type { ServiceWorkflowData } from "../types";
 import * as A from "../assets";
 
 import ServiceLevelEvaluation from "./ServiceLevelEvaluation";
@@ -10,76 +11,62 @@ import styles from "./ThreeColSection.module.css";
 
 const { sidebar, tilesGrid, fullWidthCard } = styles;
 
-// ─── Static data ──────────────────────────────────────────────────────────────
+interface ThreeColSectionProps {
+  data?: ServiceWorkflowData | null;
+}
 
-const INFO_TILES = [
-  { iconSrc: A.imgIconUserCircle, label: "Beneficiary category of the service", value: "Contributor" },
-  { iconSrc: A.imgIconCalendar,   label: "Service launch date",                  value: "09/01/2024" },
-  { iconSrc: A.imgIconGlobe,      label: "Available languages",                  value: "Arabic | English" },
-  { iconSrc: A.imgIconMoney,      label: "Service cost",                         value: "Free of charge" },
-  { iconSrc: A.imgIconTimer,      label: "Time required to complete the service", value: "Immediate" },
-];
+export default function ThreeColSection({ data }: ThreeColSectionProps) {
+  const rating       = data?.rating;
+  const faq          = data?.faq;
+  const delivery     = data?.deliveryChannels;
+  const contact      = data?.customerService;
+  const cardDetails  = data?.serviceCardDetails ?? [];
 
-const CHANNELS = ["Electronic portal", "Virtual visit"];
-
-const CONTACTS = [
-  { region: "Within the Kingdom",  phone: "8001243344" },
-  { region: "Outside the Kingdom", phone: "920014000" },
-];
-
-const WORKING_HOURS = [
-  { days: "Saturday - Thursday", hours: "from 8 AM to 8 PM" },
-  { days: "Friday",              hours: "from 2 PM to 8 PM" },
-];
-
-// ─── Component ────────────────────────────────────────────────────────────────
-
-export default function ThreeColSection() {
   return (
     <aside className={sidebar}>
-      {/* Service Level Evaluation — full width */}
       <div className={fullWidthCard}>
         <ServiceLevelEvaluation
-          iconSrc={A.imgIconStar}
-          starsSrc={A.imgStarsRating}
-          ratingCount={392}
+          iconSrc={rating?.iconUrl || A.imgIconStar}
+          starsSrc={rating?.ratingIconUrl || A.imgStarsRating}
+          label={rating?.title}
+          ratingCount={rating?.voteCount}
         />
       </div>
 
-      {/* Info tiles — 2-column grid on mobile */}
       <div className={tilesGrid}>
-        {INFO_TILES.map((tile) => (
+        {cardDetails.map((card) => (
           <InfoCardTile
-            key={tile.label}
-            iconSrc={tile.iconSrc}
-            label={tile.label}
-            value={tile.value}
+            key={card.title}
+            iconSrc={card.iconUrl}
+            label={card.title}
+            value={card.cardDescription}
           />
         ))}
       </div>
 
-      {/* Service customisation — full width */}
       <div className={fullWidthCard}>
         <ServiceCustomizationCard
-          iconSrc={A.imgIconInfo}
+          iconSrc={faq?.iconUrl || A.imgIconInfo}
+          label={faq?.title}
+          linkText={faq?.description}
           onLinkClick={() => console.log("FAQ customisation")}
         />
       </div>
 
-      {/* Delivery channels — full width */}
       <div className={fullWidthCard}>
         <ServiceDeliveryChannels
-          iconSrc={A.imgIconShareNetwork}
-          channels={CHANNELS}
+          iconSrc={delivery?.iconUrl || A.imgIconShareNetwork}
+          label={delivery?.title}
+          channels={delivery?.channels ?? []}
         />
       </div>
 
-      {/* Customer service — full width */}
       <div className={fullWidthCard}>
         <CustomerServiceCard
           iconSrc={A.imgIconChat}
-          contacts={CONTACTS}
-          workingHours={WORKING_HOURS}
+          label={contact?.heading}
+          contacts={contact?.contacts ?? []}
+          workingHours={contact?.workingHours ?? []}
         />
       </div>
     </aside>
