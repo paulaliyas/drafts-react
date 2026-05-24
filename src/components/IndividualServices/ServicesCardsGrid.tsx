@@ -17,14 +17,20 @@ const {
 
 interface ServicesCardsGridProps {
   activeTab?: ServiceTab;
+  /** When provided, overrides the static card data (e.g. from Strapi). */
+  cards?: ServiceCard[];
   onCardClick?: (id: string) => void;
 }
 
 export default function ServicesCardsGrid({
   activeTab = 'social',
+  cards: cardsProp,
   onCardClick,
 }: ServicesCardsGridProps) {
-  const cards: ServiceCard[] = useMemo(() => cardsByTab[activeTab], [activeTab]);
+  const cards: ServiceCard[] = useMemo(
+    () => cardsProp ?? cardsByTab[activeTab],
+    [cardsProp, activeTab],
+  );
 
   return (
     <div className="flex flex-col gap-6 w-full">

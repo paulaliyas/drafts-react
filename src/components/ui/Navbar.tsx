@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import { useTheme } from "@/context/ThemeProvider";
 import ServiceWorkflow from "../ServiceWorkflow/ServiceWorkflow";
 import ServicesPage from "../IndividualServices/ServicesPage";
+import type { ServiceCard } from "../IndividualServices/serviceCardsData";
+import type { ServiceWorkflowData } from "../ServiceWorkflow/types";
 import styles from "./Navbar.module.css";
 
 const {
@@ -29,6 +31,11 @@ const {
 type Lang = "en" | "ar";
 type View = "workflow" | "profile";
 
+interface NavbarProps {
+  serviceCards?: ServiceCard[] | null;
+  workflowData?: ServiceWorkflowData | null;
+}
+
 const navLinks: { label: { en: string; ar: string }; view: View }[] = [
   { label: { en: "Service Workflow", ar: "سير العمل" }, view: "workflow" },
   { label: { en: "Profile", ar: "الملف الشخصي" }, view: "profile" },
@@ -45,7 +52,7 @@ const copy = {
   },
 };
 
-export function Navbar() {
+export function Navbar({ serviceCards, workflowData }: NavbarProps) {
   const [lang, setLang] = useState<Lang>("en");
   const [view, setView] = useState<View>("workflow");
   const { theme, toggleTheme } = useTheme();
@@ -163,7 +170,7 @@ export function Navbar() {
 
       {/* Page Content */}
       <div className={content}>
-        {view === "workflow" ? <ServiceWorkflow /> : <ServicesPage />}
+        {view === "workflow" ? <ServiceWorkflow data={workflowData} /> : <ServicesPage serviceCards={serviceCards} />}
       </div>
     </div>
   );

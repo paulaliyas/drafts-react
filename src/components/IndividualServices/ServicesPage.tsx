@@ -9,7 +9,12 @@ import ServicesSearchBar from './ServicesSearchBar';
 import ServicesFilterBar from './ServicesFilterBar';
 import SearchFasterSidebar from './SearchFasterSidebar';
 import AppStoreBanner from './AppStoreBanner';
+import type { ServiceCard } from './serviceCardsData';
 import styles from './ServicesPage.module.css';
+
+interface ServicesPageProps {
+  serviceCards?: ServiceCard[] | null;
+}
 
 const {
   page,
@@ -23,7 +28,7 @@ const {
   belowCardsMobile,
 } = styles;
 
-export default function ServicesPage() {
+export default function ServicesPage({ serviceCards }: ServicesPageProps) {
   const [activeTab, setActiveTab] = useState<ServiceTab>('social');
   const [activeClassification, setActiveClassification] = useState('all');
 
@@ -63,7 +68,7 @@ export default function ServicesPage() {
             <ServicesFilterBar />
           </div>
 
-          <ServicesCardsGrid activeTab={activeTab} />
+          <ServicesCardsGrid activeTab={activeTab} cards={serviceCards ?? undefined} />
 
           {/* SearchFaster + AppStore — mobile only, below cards */}
           <div className={belowCardsMobile}>
